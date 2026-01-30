@@ -1,0 +1,3 @@
+uint32 sentry_info
+uint8 sentry_mode
+bool power_trigger_state

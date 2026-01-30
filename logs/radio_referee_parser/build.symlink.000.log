@@ -1,0 +1,4 @@
+Symlinking /home/robot/radio_ws/devel/lib/radio_referee_parser/radio_referee_parser
+Symlinking /home/robot/radio_ws/devel/lib/pkgconfig/radio_referee_parser.pc
+Symlinking /home/robot/radio_ws/devel/share/radio_referee_parser/cmake/radio_referee_parserConfig.cmake
+Symlinking /home/robot/radio_ws/devel/share/radio_referee_parser/cmake/radio_referee_parserConfig-version.cmake

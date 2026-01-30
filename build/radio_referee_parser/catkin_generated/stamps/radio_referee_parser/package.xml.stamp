@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>radio_referee_parser</name>
+    <version>0.1.0</version>
+    <description>Radio referee system data parser for RM robots</description>
+    <maintainer email="user@example.com">User</maintainer>
+
+    <license>BSD</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <depend>roscpp</depend>
+    <depend>rm_msgs</depend>
+    <depend>std_msgs</depend>
+    <depend>geometry_msgs</depend>
+    <depend>nodelet</depend>
+    <depend>pluginlib</depend>
+
+    <export>
+        <nodelet plugin="${prefix}/radio_referee_parser_plugins.xml" />
+    </export>
+</package>

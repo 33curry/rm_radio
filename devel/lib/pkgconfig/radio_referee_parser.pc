@@ -1,0 +1,1 @@
+/home/robot/radio_ws/devel/.private/radio_referee_parser/lib/pkgconfig/radio_referee_parser.pc

@@ -1,0 +1,8 @@
+prefix=/home/robot/radio_ws/install
+
+Name: radio_referee_parser
+Description: Description of radio_referee_parser
+Version: 0.1.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rm_msgs std_msgs geometry_msgs nodelet

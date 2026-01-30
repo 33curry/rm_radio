@@ -1,0 +1,4 @@
+Symlinking /home/robot/radio_ws/devel/lib/librm_robot_hw_sim.so
+Symlinking /home/robot/radio_ws/devel/lib/pkgconfig/rm_gazebo.pc
+Symlinking /home/robot/radio_ws/devel/share/rm_gazebo/cmake/rm_gazeboConfig-version.cmake
+Symlinking /home/robot/radio_ws/devel/share/rm_gazebo/cmake/rm_gazeboConfig.cmake

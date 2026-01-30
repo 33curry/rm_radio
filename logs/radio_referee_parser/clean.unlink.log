@@ -1,0 +1,4 @@
+Unlinking: /home/robot/radio_ws/devel/lib/libradio_referee_parser_nodelet.so
+Unlinking: /home/robot/radio_ws/devel/lib/pkgconfig/radio_referee_parser.pc
+Unlinking: /home/robot/radio_ws/devel/share/radio_referee_parser/cmake/radio_referee_parserConfig.cmake
+Unlinking: /home/robot/radio_ws/devel/share/radio_referee_parser/cmake/radio_referee_parserConfig-version.cmake

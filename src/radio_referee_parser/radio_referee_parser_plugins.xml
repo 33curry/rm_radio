@@ -1,0 +1,7 @@
+<library path="lib/libradio_referee_parser_nodelet">
+  <class name="radio_referee_parser/RadioRefereeParser" type="radio_referee_parser::RadioRefereeParser" base_class_type="nodelet::Nodelet">
+    <description>
+      Radio referee system data parser for RM robots
+    </description>
+  </class>
+</library>

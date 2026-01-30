@@ -1,0 +1,6 @@
+devel_space: /home/robot/radio_ws/devel
+install: false
+install_space: /home/robot/radio_ws/install
+profile: default
+source_space: /home/robot/radio_ws/src
+workspace: /home/robot/radio_ws

@@ -1,0 +1,4 @@
+Symlinking /home/robot/radio_ws/devel/lib/rm_dbus/rm_dbus
+Symlinking /home/robot/radio_ws/devel/lib/pkgconfig/rm_dbus.pc
+Symlinking /home/robot/radio_ws/devel/share/rm_dbus/cmake/rm_dbusConfig.cmake
+Symlinking /home/robot/radio_ws/devel/share/rm_dbus/cmake/rm_dbusConfig-version.cmake

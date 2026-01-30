@@ -1,0 +1,5 @@
+Symlinking /home/robot/radio_ws/devel/lib/librm_hw_loader_plugins.so
+Symlinking /home/robot/radio_ws/devel/lib/pkgconfig/rm_hw.pc
+Symlinking /home/robot/radio_ws/devel/lib/rm_hw/rm_hw
+Symlinking /home/robot/radio_ws/devel/share/rm_hw/cmake/rm_hwConfig-version.cmake
+Symlinking /home/robot/radio_ws/devel/share/rm_hw/cmake/rm_hwConfig.cmake

@@ -1,0 +1,5 @@
+Symlinking /home/robot/radio_ws/devel/lib/librm_common.so
+Symlinking /home/robot/radio_ws/devel/lib/rm_common/test_kalman
+Symlinking /home/robot/radio_ws/devel/lib/pkgconfig/rm_common.pc
+Symlinking /home/robot/radio_ws/devel/share/rm_common/cmake/rm_commonConfig-version.cmake
+Symlinking /home/robot/radio_ws/devel/share/rm_common/cmake/rm_commonConfig.cmake

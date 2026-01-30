@@ -1,0 +1,1 @@
+/home/robot/radio_ws/devel/.private/radio_referee_parser/share/radio_referee_parser/cmake/radio_referee_parserConfig-version.cmake
