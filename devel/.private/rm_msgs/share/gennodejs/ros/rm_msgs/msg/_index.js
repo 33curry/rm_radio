@@ -32,6 +32,7 @@ let GameRobotStatus = require('./GameRobotStatus.js');
 let DartInfo = require('./DartInfo.js');
 let RobotsPositionData = require('./RobotsPositionData.js');
 let PowerHeatData = require('./PowerHeatData.js');
+let RadarEnemyPosition = require('./RadarEnemyPosition.js');
 let Buff = require('./Buff.js');
 let GameRobotHp = require('./GameRobotHp.js');
 let CurrentSentryPosData = require('./CurrentSentryPosData.js');
@@ -40,11 +41,14 @@ let ClientMapReceiveData = require('./ClientMapReceiveData.js');
 let ClientMapSendData = require('./ClientMapSendData.js');
 let RadarData = require('./RadarData.js');
 let EngineerUi = require('./EngineerUi.js');
+let RadarEnemyHp = require('./RadarEnemyHp.js');
 let MapSentryData = require('./MapSentryData.js');
+let RadarRobotBuff = require('./RadarRobotBuff.js');
 let RadarInfo = require('./RadarInfo.js');
 let EventData = require('./EventData.js');
 let PowerManagementProcessStackOverflowData = require('./PowerManagementProcessStackOverflowData.js');
 let VisualizeStateData = require('./VisualizeStateData.js');
+let RadarEnemyBulletAllowance = require('./RadarEnemyBulletAllowance.js');
 let RadarToSentry = require('./RadarToSentry.js');
 let GameStatus = require('./GameStatus.js');
 let RadarMarkData = require('./RadarMarkData.js');
@@ -60,10 +64,13 @@ let BulletAllowance = require('./BulletAllowance.js');
 let PowerManagementInitializationExceptionData = require('./PowerManagementInitializationExceptionData.js');
 let PowerManagementSampleAndStatusData = require('./PowerManagementSampleAndStatusData.js');
 let SentryInfo = require('./SentryInfo.js');
+let RadarEnemyBuff = require('./RadarEnemyBuff.js');
 let IcraBuffDebuffZoneStatus = require('./IcraBuffDebuffZoneStatus.js');
 let SupplyProjectileAction = require('./SupplyProjectileAction.js');
 let RfidStatus = require('./RfidStatus.js');
+let RadarEnemyStatus = require('./RadarEnemyStatus.js');
 let SentryAttackingTarget = require('./SentryAttackingTarget.js');
+let RadarRadioData = require('./RadarRadioData.js');
 let DartClientCmd = require('./DartClientCmd.js');
 let RadarCmd = require('./RadarCmd.js');
 let StateCmd = require('./StateCmd.js');
@@ -108,6 +115,7 @@ module.exports = {
   DartInfo: DartInfo,
   RobotsPositionData: RobotsPositionData,
   PowerHeatData: PowerHeatData,
+  RadarEnemyPosition: RadarEnemyPosition,
   Buff: Buff,
   GameRobotHp: GameRobotHp,
   CurrentSentryPosData: CurrentSentryPosData,
@@ -116,11 +124,14 @@ module.exports = {
   ClientMapSendData: ClientMapSendData,
   RadarData: RadarData,
   EngineerUi: EngineerUi,
+  RadarEnemyHp: RadarEnemyHp,
   MapSentryData: MapSentryData,
+  RadarRobotBuff: RadarRobotBuff,
   RadarInfo: RadarInfo,
   EventData: EventData,
   PowerManagementProcessStackOverflowData: PowerManagementProcessStackOverflowData,
   VisualizeStateData: VisualizeStateData,
+  RadarEnemyBulletAllowance: RadarEnemyBulletAllowance,
   RadarToSentry: RadarToSentry,
   GameStatus: GameStatus,
   RadarMarkData: RadarMarkData,
@@ -136,10 +147,13 @@ module.exports = {
   PowerManagementInitializationExceptionData: PowerManagementInitializationExceptionData,
   PowerManagementSampleAndStatusData: PowerManagementSampleAndStatusData,
   SentryInfo: SentryInfo,
+  RadarEnemyBuff: RadarEnemyBuff,
   IcraBuffDebuffZoneStatus: IcraBuffDebuffZoneStatus,
   SupplyProjectileAction: SupplyProjectileAction,
   RfidStatus: RfidStatus,
+  RadarEnemyStatus: RadarEnemyStatus,
   SentryAttackingTarget: SentryAttackingTarget,
+  RadarRadioData: RadarRadioData,
   DartClientCmd: DartClientCmd,
   RadarCmd: RadarCmd,
   StateCmd: StateCmd,

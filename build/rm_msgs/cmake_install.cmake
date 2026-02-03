@@ -230,6 +230,16 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/PowerManagementProcessStackOverflowData.msg"
     "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/PowerManagementSystemExceptionData.msg"
     "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/PowerManagementUnknownExceptionData.msg"
+    "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg"
+    "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg"
+    "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg"
+    "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg"
+    "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg"
+    "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+    "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg"
+    "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg"
+    "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg"
+    "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg"
     )
 endif()
 

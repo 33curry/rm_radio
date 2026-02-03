@@ -3,8 +3,12 @@
 #include <ros/ros.h>
 #include <std_msgs/UInt16.h>
 #include <std_msgs/Bool.h>
-#include <geometry_msgs/PoseArray.h>
-#include <rm_msgs/GameRobotHp.h>
+#include <rm_msgs/RadarEnemyPosition.h>
+#include <rm_msgs/RadarRadioData.h>
+#include <rm_msgs/RadarEnemyHp.h>
+#include <rm_msgs/RadarEnemyStatus.h>
+#include <rm_msgs/RadarEnemyBulletAllowance.h>
+#include <rm_msgs/RadarEnemyBuff.h>
 #include <cstdint>
 #include <nodelet/nodelet.h>
 
@@ -26,10 +30,11 @@ bool     Verify_CRC16_Check_Sum(const uint8_t* pchMessage, uint32_t dwLength);
 /* 主要命令码 */
 enum class MsgType : uint16_t
 {
-  GAME_ROBOT_HP     = 0x0003,
-  ROBOTS_POSITION   = 0x020B,
-  BULLET_REMAINING  = 0x0208,
-  RFID_STATUS       = 0x0209,
+  ENEMY_POSITION        = 0x0A01,
+  ENEMY_HP              = 0x0A02,
+  ENEMY_BULLET_ALLOWANCE= 0x0A03,
+  ENEMY_STATUS          = 0x0A04,
+  ENEMY_BUFF            = 0x0A05,
 };
 
 class RadioRefereeParser : public nodelet::Nodelet
@@ -37,10 +42,6 @@ class RadioRefereeParser : public nodelet::Nodelet
 public:
   RadioRefereeParser() = default;
   ~RadioRefereeParser() override = default;
-
-  /* 外部注入本车 ID（收到 0x0201 后调用） */
-  void setRobotId(uint16_t id) { robot_id_ = id; }
-  uint16_t robotId() const { return robot_id_; }
 
   virtual void onInit() override;
 
@@ -50,68 +51,29 @@ private:
   /* 订阅原始字节流 */
   ros::Subscriber radio_referee_sub_;
 
-  /* 发布器——红方 */
-  ros::Publisher red_all_hp_pub_;
-  ros::Publisher red_all_pos_pub_;
-  ros::Publisher red_bullet_17mm_pub_;
-  ros::Publisher red_bullet_42mm_pub_;
-  ros::Publisher red_total_soc_pub_;
-  ros::Publisher red_remain_bullet_17mm_pub_;
-  ros::Publisher red_remain_bullet_42mm_pub_;
-  ros::Publisher red_outpost_buff_point_pub_;
-  ros::Publisher red_fort_buff_point_pub_;
-  // 红方其他环境/增益状态
-  ros::Publisher red_wall_pub_;                   // 环形高地
-  ros::Publisher red_trap_high_pub_;              // 梯形高地
-  ros::Publisher red_fly_pre_pub_;                // 飞坡前
-  ros::Publisher red_fly_post_pub_;               // 飞坡后
-  ros::Publisher red_central_low_pub_;            // 中央低
-  ros::Publisher red_central_high_pub_;           // 中央高
-  ros::Publisher red_highway_low_pub_;            // 公路低
-  ros::Publisher red_highway_high_pub_;           // 公路高
-  ros::Publisher red_assembly_pub_;               // 装配点
-  ros::Publisher red_highway_tunnel_low_pub_;     // 公路隧道低
-  ros::Publisher red_highway_tunnel_high_pub_;    // 公路隧道高
-  ros::Publisher red_trap_tunnel_low_pub_;        // 梯形隧道低
-  ros::Publisher red_trap_tunnel_high_pub_;       // 梯形隧道高
-
-  /* 发布器——蓝方 */
-  ros::Publisher blue_all_hp_pub_;
-  ros::Publisher blue_all_pos_pub_;
-  ros::Publisher blue_bullet_17mm_pub_;
-  ros::Publisher blue_bullet_42mm_pub_;
-  ros::Publisher blue_total_soc_pub_;
-  ros::Publisher blue_remain_bullet_17mm_pub_;
-  ros::Publisher blue_remain_bullet_42mm_pub_;
-  ros::Publisher blue_outpost_buff_point_pub_;
-  ros::Publisher blue_fort_buff_point_pub_;
-  // 新增：蓝方其他环境/增益状态
-  ros::Publisher blue_wall_pub_;
-  ros::Publisher blue_trap_high_pub_;
-  ros::Publisher blue_fly_pre_pub_;
-  ros::Publisher blue_fly_post_pub_;
-  ros::Publisher blue_central_low_pub_;
-  ros::Publisher blue_central_high_pub_;
-  ros::Publisher blue_highway_low_pub_;
-  ros::Publisher blue_highway_high_pub_;
-  ros::Publisher blue_assembly_pub_;
-  ros::Publisher blue_highway_tunnel_low_pub_;
-  ros::Publisher blue_highway_tunnel_high_pub_;
-  ros::Publisher blue_trap_tunnel_low_pub_;
-  ros::Publisher blue_trap_tunnel_high_pub_;
-
-  /* 公共增益点 */
-  ros::Publisher central_buff_point_pub_;
+  /* 雷达无线链路数据发布器 */
+  ros::Publisher enemy_pos_pub_;              // 0x0A01 对方位置
+  ros::Publisher enemy_hp_pub_;               // 0x0A02 对方血量
+  // 0x0A03 对方允许发弹量
+  ros::Publisher enemy_bullet_allowance_pub_; 
+  // 0x0A04 对方状态 (金币/领地) - 使用 rm_msgs/RadarEnemyStatus
+  ros::Publisher enemy_status_pub_;           
+  
+  // 0x0A05 对方增益
+  ros::Publisher enemy_buff_pub_;
 
   /* 数据缓存 */
-  uint16_t robot_id_ = 0;   // 0 = 尚未获得
+  uint16_t robot_id_ = 0;   // 本机ID
 
   /* 回调 & 解析 */
-  void radioRefereeDataCallback(const rm_msgs::GameRobotHp::ConstPtr& msg);
-  void parseGameRobotHp(const uint8_t* data, uint16_t len);
-  void parseRobotsPosition(const uint8_t* data, uint16_t len);
-  void parseBulletAllowance(const uint8_t* data, uint16_t len);
-  void parseRfidStatus(const uint8_t* data, uint16_t len);
+  void radioRefereeDataCallback(const rm_msgs::RadarRadioData::ConstPtr& msg);
+  
+  // 无线链路数据解析函数
+  void parseEnemyPosition(const uint8_t* data, uint16_t len);
+  void parseEnemyHp(const uint8_t* data, uint16_t len);
+  void parseEnemyBulletAllowance(const uint8_t* data, uint16_t len);
+  void parseEnemyStatus(const uint8_t* data, uint16_t len);
+  void parseEnemyBuff(const uint8_t* data, uint16_t len);
 };
 
 }  // namespace radio_referee_parser

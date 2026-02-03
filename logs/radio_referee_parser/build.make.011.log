@@ -1,0 +1,10 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/radio_referee_parser_nodelet.dir/src/radio_referee_parser.cpp.o[0m
+In file included from [01m[K/home/robot/radio_ws/src/radio_referee_parser/include/radio_referee_parser/radio_referee_parser.h:11[m[K,
+                 from [01m[K/home/robot/radio_ws/src/radio_referee_parser/src/radio_referee_parser.cpp:1[m[K:
+[01m[K/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarEnemyBuff.h:18:10:[m[K [01;31m[Kfatal error: [m[Krm_msgs/RadarRobotBuff.h: 没有那个文件或目录
+   18 | #include [01;31m[K<rm_msgs/RadarRobotBuff.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/radio_referee_parser_nodelet.dir/build.make:63：CMakeFiles/radio_referee_parser_nodelet.dir/src/radio_referee_parser.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:563：CMakeFiles/radio_referee_parser_nodelet.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

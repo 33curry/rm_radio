@@ -74,374 +74,288 @@ void RadioRefereeParser::onInit()
 {
   nh_ = getPrivateNodeHandle();
 
-  // Load robot_id from parameter server, default to 1 (Red Hero)
+  // Load robot_id from parameter server, default to 1
   nh_.param<int>("robot_id", (int&)robot_id_, 1);
 
   // Subscribe to radio referee data
-  // Note: Adjust the topic name based on your radio node's actual topic
   radio_referee_sub_ = nh_.subscribe("/radio/referee_data", 10,
       &RadioRefereeParser::radioRefereeDataCallback, this);
 
-  // Initialize publishers - Red team
-  red_all_hp_pub_ = nh_.advertise<rm_msgs::GameRobotHp>("/referee_parser/red/all_robot_hp", 1);
-  red_all_pos_pub_ = nh_.advertise<geometry_msgs::PoseArray>("/referee_parser/red/all_robot_position", 1);
+  // Initialize publishers for Radio/Unlimited Link Data
+  // 0x0A01
+  enemy_pos_pub_ = nh_.advertise<rm_msgs::RadarEnemyPosition>("/referee_parser/radar/enemy_position", 1);
+  // 0x0A02
+  enemy_hp_pub_ = nh_.advertise<rm_msgs::RadarEnemyHp>("/referee_parser/radar/enemy_hp", 1);
+  // 0x0A03
+  enemy_bullet_allowance_pub_ = nh_.advertise<rm_msgs::RadarEnemyBulletAllowance>("/referee_parser/radar/enemy_bullet_allowance", 1);
+  // 0x0A04
+  enemy_status_pub_ = nh_.advertise<rm_msgs::RadarEnemyStatus>("/referee_parser/radar/enemy_status", 1);
+  
+  // 0x0A05 (Assuming float array for simplicity of viewing all buffs)
+  enemy_buff_pub_ = nh_.advertise<rm_msgs::RadarEnemyBuff>("/referee_parser/radar/enemy_buff", 1);
 
-  // Initialize publishers - Blue team
-  blue_all_hp_pub_ = nh_.advertise<rm_msgs::GameRobotHp>("/referee_parser/blue/all_robot_hp", 1);
-  blue_all_pos_pub_ = nh_.advertise<geometry_msgs::PoseArray>("/referee_parser/blue/all_robot_position", 1);
-
-  // Initialize publishers - Bullet remaining
-  red_bullet_17mm_pub_ = nh_.advertise<std_msgs::UInt16>("/referee_parser/red/bullet_17mm", 1);
-  red_bullet_42mm_pub_ = nh_.advertise<std_msgs::UInt16>("/referee_parser/red/bullet_42mm", 1);
-  blue_bullet_17mm_pub_ = nh_.advertise<std_msgs::UInt16>("/referee_parser/blue/bullet_17mm", 1);
-  blue_bullet_42mm_pub_ = nh_.advertise<std_msgs::UInt16>("/referee_parser/blue/bullet_42mm", 1);
-
-  // Initialize publishers - Team info
-  red_total_soc_pub_ = nh_.advertise<std_msgs::UInt16>("/referee_parser/red/total_soc", 1);
-  blue_total_soc_pub_ = nh_.advertise<std_msgs::UInt16>("/referee_parser/blue/total_soc", 1);
-  red_remain_bullet_17mm_pub_ = nh_.advertise<std_msgs::UInt16>("/referee_parser/red/remain_bullet_17mm", 1);
-  red_remain_bullet_42mm_pub_ = nh_.advertise<std_msgs::UInt16>("/referee_parser/red/remain_bullet_42mm", 1);
-  blue_remain_bullet_17mm_pub_ = nh_.advertise<std_msgs::UInt16>("/referee_parser/blue/remain_bullet_17mm", 1);
-  blue_remain_bullet_42mm_pub_ = nh_.advertise<std_msgs::UInt16>("/referee_parser/blue/remain_bullet_42mm", 1);
-
-  // Initialize publishers - Buff point status
-  red_outpost_buff_point_pub_ = nh_.advertise<std_msgs::Bool>("/referee_parser/red/outpost_buff_point", 1);
-  blue_outpost_buff_point_pub_ = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/outpost_buff_point", 1);
-  red_fort_buff_point_pub_ = nh_.advertise<std_msgs::Bool>("/referee_parser/red/fort_buff_point", 1);
-  blue_fort_buff_point_pub_ = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/fort_buff_point", 1);
-  central_buff_point_pub_ = nh_.advertise<std_msgs::Bool>("/referee_parser/central_buff_point", 1);
-
-  // Initialize publishers - Red environment
-  red_wall_pub_               = nh_.advertise<std_msgs::Bool>("/referee_parser/red/ring_highland", 1);
-  red_trap_high_pub_          = nh_.advertise<std_msgs::Bool>("/referee_parser/red/trapezoidal_highland", 1);
-  red_fly_pre_pub_            = nh_.advertise<std_msgs::Bool>("/referee_parser/red/flying_slope_pre", 1);
-  red_fly_post_pub_           = nh_.advertise<std_msgs::Bool>("/referee_parser/red/flying_slope_post", 1);
-  red_central_low_pub_        = nh_.advertise<std_msgs::Bool>("/referee_parser/red/central_highland_low", 1);
-  red_central_high_pub_       = nh_.advertise<std_msgs::Bool>("/referee_parser/red/central_highland_high", 1);
-  red_highway_low_pub_        = nh_.advertise<std_msgs::Bool>("/referee_parser/red/highway_low", 1);
-  red_highway_high_pub_       = nh_.advertise<std_msgs::Bool>("/referee_parser/red/highway_high", 1);
-  red_assembly_pub_           = nh_.advertise<std_msgs::Bool>("/referee_parser/red/assembly_point", 1);
-  red_highway_tunnel_low_pub_ = nh_.advertise<std_msgs::Bool>("/referee_parser/red/highway_tunnel_low", 1);
-  red_highway_tunnel_high_pub_= nh_.advertise<std_msgs::Bool>("/referee_parser/red/highway_tunnel_high", 1);
-  red_trap_tunnel_low_pub_    = nh_.advertise<std_msgs::Bool>("/referee_parser/red/trapezoidal_tunnel_low", 1);
-  red_trap_tunnel_high_pub_   = nh_.advertise<std_msgs::Bool>("/referee_parser/red/trapezoidal_tunnel_high", 1);
-
-  // Initialize publishers - Blue environment
-  blue_wall_pub_               = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/ring_highland", 1);
-  blue_trap_high_pub_          = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/trapezoidal_highland", 1);
-  blue_fly_pre_pub_            = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/flying_slope_pre", 1);
-  blue_fly_post_pub_           = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/flying_slope_post", 1);
-  blue_central_low_pub_        = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/central_highland_low", 1);
-  blue_central_high_pub_       = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/central_highland_high", 1);
-  blue_highway_low_pub_        = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/highway_low", 1);
-  blue_highway_high_pub_       = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/highway_high", 1);
-  blue_assembly_pub_           = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/assembly_point", 1);
-  blue_highway_tunnel_low_pub_ = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/highway_tunnel_low", 1);
-  blue_highway_tunnel_high_pub_= nh_.advertise<std_msgs::Bool>("/referee_parser/blue/highway_tunnel_high", 1);
-  blue_trap_tunnel_low_pub_    = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/trapezoidal_tunnel_low", 1);
-  blue_trap_tunnel_high_pub_   = nh_.advertise<std_msgs::Bool>("/referee_parser/blue/trapezoidal_tunnel_high", 1);
-
-  ROS_INFO("Radio Referee Parser initialized - subscribing to radio referee data");
+  ROS_INFO("Radio Referee Parser initialized - RADAR MODE");
 }
 
-// Main callback: receives radio data and dispatches based on msg type
-void RadioRefereeParser::radioRefereeDataCallback(const rm_msgs::GameRobotHp::ConstPtr& msg)
-  // =====================
-  // 数据接收与协议化拼包区域
-  // =====================
-  // 说明：本回调持续接收原始字节流，自动查找帧头、拼包、校验、分发
+void RadioRefereeParser::radioRefereeDataCallback(const rm_msgs::RadarRadioData::ConstPtr& msg)
 {
   // 协议化缓冲区拼包、校验、分发
   static std::vector<uint8_t> buffer;
-  // 假设msg->data为原始字节流（如有不同请调整）
-  const uint8_t* raw = reinterpret_cast<const uint8_t*>(&msg->ally_1_robot_HP);
-  buffer.insert(buffer.end(), raw, raw + sizeof(msg->ally_1_robot_HP) * 7 + sizeof(msg->ally_outpost_HP) + sizeof(msg->ally_base_HP));
+  // 假设msg->data为原始字节流
+  const uint8_t* raw = msg->data.data();
+  // 注意：这里读取的长度假设与旧代码一致，实际使用中需确保底层发上来的数据足够或正确
+  // 旧代码: sizeof(ally_1) * 7 + ... 可能只是为了凑一个足够大的buffer读取操作
+  // 建议: msg 如果是 GameRobotHp 类型，其实并不适合传输任意字节流。
+  // 但既然是沿用旧架构，假设底层把字节流塞进了这个结构体。
+  // 我们尽可能多读一些。
+  size_t read_len = msg->data.size();
+  buffer.insert(buffer.end(), raw, raw + read_len);
 
-  // 结合协议：SOF=0xA5，帧头5字节（SOF+长度+序号+CRC8），命令码2字节，帧尾2字节（CRC16）
   constexpr uint8_t SOF = 0xA5;
   constexpr size_t FRAME_HEADER_LEN = 5;
   constexpr size_t FRAME_TAIL_LEN = 2;
+
   while (true) {
-  // 查找帧头（SOF=0xA5）
     auto sof = std::find(buffer.begin(), buffer.end(), SOF);
-    if (sof == buffer.end()) break;
+    if (sof == buffer.end()) {
+      buffer.clear();
+      break;
+    }
     size_t sof_index = std::distance(buffer.begin(), sof);
     if (buffer.size() < sof_index + FRAME_HEADER_LEN) break;
-  // 解析数据长度（协议规定为帧头第2-3字节，单位字节）
+
     uint16_t data_length = buffer[sof_index + 1] | (buffer[sof_index + 2] << 8);
     size_t total_len = FRAME_HEADER_LEN + 2 + data_length + FRAME_TAIL_LEN;
     if (buffer.size() < sof_index + total_len) break;
-    // CRC8查表校验
+
+    // CRC8
     if (Get_CRC8_Check_Sum(&buffer[sof_index], 4) != buffer[sof_index + 4]) {
       buffer.erase(buffer.begin(), buffer.begin() + sof_index + 1);
       continue;
     }
-    // CRC16查表校验
+    // CRC16
     if (!Verify_CRC16_Check_Sum(&buffer[sof_index], total_len)) {
       buffer.erase(buffer.begin(), buffer.begin() + sof_index + 1);
       continue;
     }
-  // 命令码（协议规定帧头后紧跟2字节，低字节在前）
+
     uint16_t cmd_id = buffer[sof_index + FRAME_HEADER_LEN] | (buffer[sof_index + FRAME_HEADER_LEN + 1] << 8);
-    
-  // 数据体（命令码后紧跟，长度为data_length）
     const uint8_t* payload = &buffer[sof_index + FRAME_HEADER_LEN + 2];
     uint16_t payload_len = data_length;
-  // =====================
-  // 按cmd_id分发到不同解析函数
-  // =====================
-    switch (cmd_id) {
-      case 0x0003: // 机器人血量 game_robot_HP_t
-        parseGameRobotHp(payload, payload_len);
+
+    // 只处理雷达/无限链路数据 (0x0A01 - 0x0A05)
+    switch ((MsgType)cmd_id) {
+      case MsgType::ENEMY_POSITION:
+        parseEnemyPosition(payload, payload_len);
         break;
-      case 0x020B: // 机器人位置 ground_robot_position_t
-        parseRobotsPosition(payload, payload_len);
+      case MsgType::ENEMY_HP:
+        parseEnemyHp(payload, payload_len);
         break;
-      case 0x0208: // 剩余发弹量 projectile_allowance_t
-        parseBulletAllowance(payload, payload_len);
+      case MsgType::ENEMY_BULLET_ALLOWANCE:
+        parseEnemyBulletAllowance(payload, payload_len);
         break;
-      case 0x0209: // RFID状态 rfid_status_t
-        parseRfidStatus(payload, payload_len);
+      case MsgType::ENEMY_STATUS:
+        parseEnemyStatus(payload, payload_len);
+        break;
+      case MsgType::ENEMY_BUFF:
+        parseEnemyBuff(payload, payload_len);
+        break;
+      default:
         break;
     }
-    // 移除已处理数据
+
     buffer.erase(buffer.begin(), buffer.begin() + sof_index + total_len);
   }
 }
 
-void RadioRefereeParser::parseGameRobotHp(const uint8_t* data, uint16_t length)
+// -------------------------------------------------------------
+// 数据解析实现
+// -------------------------------------------------------------
+
+void RadioRefereeParser::parseEnemyPosition(const uint8_t* data, uint16_t length)
 {
-  // =====================
-  // 机器人血量包解析（cmd_id=0x0003，结构体game_robot_HP_t）
-  // =====================
-  struct GameRobotHpRaw
-  {
-    uint16_t ally_1_robot_HP;
-    uint16_t ally_2_robot_HP;
-    uint16_t ally_3_robot_HP;
-    uint16_t ally_4_robot_HP;
+  // ID: 0x0A01 对方机器人位置 (单位: cm)
+  struct EnemyPositionRaw {
+    uint16_t hero_x;      uint16_t hero_y;
+    uint16_t engineer_x;  uint16_t engineer_y;
+    uint16_t standard_3_x; uint16_t standard_3_y;
+    uint16_t standard_4_x; uint16_t standard_4_y;
+    uint16_t air_x;       uint16_t air_y;
+    uint16_t sentry_x;    uint16_t sentry_y;
+  } __packed;
+
+  if (length < sizeof(EnemyPositionRaw)) return;
+  const EnemyPositionRaw* pos = reinterpret_cast<const EnemyPositionRaw*>(data);
+
+  rm_msgs::RadarEnemyPosition msg;
+  msg.hero_x       = pos->hero_x / 100.0f;
+  msg.hero_y       = pos->hero_y / 100.0f;
+  msg.engineer_x   = pos->engineer_x / 100.0f;
+  msg.engineer_y   = pos->engineer_y / 100.0f;
+  msg.standard_3_x = pos->standard_3_x / 100.0f;
+  msg.standard_3_y = pos->standard_3_y / 100.0f;
+  msg.standard_4_x = pos->standard_4_x / 100.0f;
+  msg.standard_4_y = pos->standard_4_y / 100.0f;
+  msg.air_x        = pos->air_x / 100.0f;
+  msg.air_y        = pos->air_y / 100.0f;
+  msg.sentry_x     = pos->sentry_x / 100.0f;
+  msg.sentry_y     = pos->sentry_y / 100.0f;
+
+  enemy_pos_pub_.publish(msg);
+}
+
+void RadioRefereeParser::parseEnemyHp(const uint8_t* data, uint16_t length)
+{
+  // ID: 0x0A02 对方机器人血量
+  struct EnemyHpRaw {
+    uint16_t hero_hp;
+    uint16_t engineer_hp;
+    uint16_t standard_3_hp;
+    uint16_t standard_4_hp;
     uint16_t reserved;
-    uint16_t ally_7_robot_HP;
-    uint16_t ally_outpost_HP;
-    uint16_t ally_base_HP;
+    uint16_t sentry_hp;
   } __packed;
+
+  if (length < sizeof(EnemyHpRaw)) return;
+  const EnemyHpRaw* hp = reinterpret_cast<const EnemyHpRaw*>(data);
+
+  rm_msgs::RadarEnemyHp msg;
+  msg.hero_hp = hp->hero_hp;
+  msg.engineer_hp = hp->engineer_hp;
+  msg.standard_3_hp = hp->standard_3_hp;
+  msg.standard_4_hp = hp->standard_4_hp;
+  msg.sentry_hp = hp->sentry_hp;
   
-  if (length < sizeof(GameRobotHpRaw)) return;
-
-  const GameRobotHpRaw* hp_data = reinterpret_cast<const GameRobotHpRaw*>(data);
-
-  // 按robot_id_判断队伍
-  bool is_red = (robot_id_ >= 1 && robot_id_ <= 11);
-
-  rm_msgs::GameRobotHp big_hp_msg;
-  big_hp_msg.ally_1_robot_HP = hp_data->ally_1_robot_HP;
-  big_hp_msg.ally_2_robot_HP = hp_data->ally_2_robot_HP;
-  big_hp_msg.ally_3_robot_HP = hp_data->ally_3_robot_HP;
-  big_hp_msg.ally_4_robot_HP = hp_data->ally_4_robot_HP;
-  // big_hp_msg.reserved = hp_data->reserved;
-  big_hp_msg.ally_7_robot_HP = hp_data->ally_7_robot_HP;
-  big_hp_msg.ally_outpost_HP = hp_data->ally_outpost_HP;
-  big_hp_msg.ally_base_HP    = hp_data->ally_base_HP;
-
-  if (is_red) {
-    red_all_hp_pub_.publish(big_hp_msg);
-  } else {
-    blue_all_hp_pub_.publish(big_hp_msg);
-  }
+  enemy_hp_pub_.publish(msg);
 }
 
-void RadioRefereeParser::parseRobotsPosition(const uint8_t* data, uint16_t length)
+void RadioRefereeParser::parseEnemyBulletAllowance(const uint8_t* data, uint16_t length)
 {
-  // =====================
-  // 机器人位置包解析（cmd_id=0x020B，结构体ground_robot_position_t）
-  // =====================
-  struct RobotsPositionRaw
-  {
-    float hero_x;
-    float hero_y;
-    float engineer_x;
-    float engineer_y;
-    float standard_3_x;
-    float standard_3_y;
-    float standard_4_x;
-    float standard_4_y;
-    float reserved_1;
-    float reserved_2;
+  // ID: 0x0A03 对方允许发弹量
+  struct EnemyBulletRaw {
+    uint16_t hero_bullet;
+    uint16_t standard_3_bullet;
+    uint16_t standard_4_bullet;
+    uint16_t air_bullet;
+    uint16_t sentry_bullet;
   } __packed;
 
-  if (length < sizeof(RobotsPositionRaw)) return;
+  if (length < sizeof(EnemyBulletRaw)) return;
+  const EnemyBulletRaw* bullet = reinterpret_cast<const EnemyBulletRaw*>(data);
 
-  const RobotsPositionRaw* pos_data = reinterpret_cast<const RobotsPositionRaw*>(data);
+  rm_msgs::RadarEnemyBulletAllowance msg;
+  msg.hero_bullet       = bullet->hero_bullet;
+  msg.standard_3_bullet = bullet->standard_3_bullet;
+  msg.standard_4_bullet = bullet->standard_4_bullet;
+  msg.air_bullet        = bullet->air_bullet;
+  msg.sentry_bullet     = bullet->sentry_bullet;
 
-  // 按robot_id_判断队伍
-  bool is_red = (robot_id_ >= 1 && robot_id_ <= 11);
-
-  geometry_msgs::PoseArray poses_msg;
-  poses_msg.header.frame_id = "map"; 
-  poses_msg.header.stamp = ros::Time::now();
-
-  auto add_pose = [&](float x, float y) {
-      geometry_msgs::Pose p;
-      p.position.x = x;
-      p.position.y = y;
-      p.position.z = 0;
-      p.orientation.w = 1.0; 
-      poses_msg.poses.push_back(p);
-  };
-  add_pose(pos_data->hero_x, pos_data->hero_y);             
-  add_pose(pos_data->engineer_x, pos_data->engineer_y);     
-  add_pose(pos_data->standard_3_x, pos_data->standard_3_y); 
-  add_pose(pos_data->standard_4_x, pos_data->standard_4_y); 
-
-  if (is_red) {
-    red_all_pos_pub_.publish(poses_msg);
-  } else {
-    blue_all_pos_pub_.publish(poses_msg);
-  }
+  enemy_bullet_allowance_pub_.publish(msg);
 }
 
-void RadioRefereeParser::parseBulletAllowance(const uint8_t* data, uint16_t length)
+void RadioRefereeParser::parseEnemyStatus(const uint8_t* data, uint16_t length)
 {
-  // =====================
-  // 剩余发弹量包解析（cmd_id=0x0208，结构体projectile_allowance_t）
-  // =====================
-  
-  struct BulletAllowanceRaw
-  {
-    uint16_t bullet_allowance_num_17_mm;
-    uint16_t bullet_allowance_num_42_mm;
-    uint16_t projectile_allowance_fortress;
-    uint16_t coin_remaining_num;
+  // ID: 0x0A04 对方金币与领地状态
+  struct EnemyStatusRaw {
+    uint16_t remainder_coin;
+    uint16_t total_coin;
+    uint32_t status_bitmask;
   } __packed;
 
-  if (length < sizeof(BulletAllowanceRaw)) return;
+  if (length < sizeof(EnemyStatusRaw)) return;
+  const EnemyStatusRaw* s = reinterpret_cast<const EnemyStatusRaw*>(data);
 
-  const BulletAllowanceRaw* bullet_data = reinterpret_cast<const BulletAllowanceRaw*>(data);
+  rm_msgs::RadarEnemyStatus msg;
+  msg.remainder_coin = s->remainder_coin;
+  msg.total_coin     = s->total_coin;
+  msg.status_bitmask = s->status_bitmask;
 
-  // 按robot_id_判断队伍
-  bool is_red = (robot_id_ >= 1 && robot_id_ <= 11);
-  std_msgs::UInt16 bullet_17mm, bullet_42mm, coin;
-  bullet_17mm.data = bullet_data->bullet_allowance_num_17_mm;
-  bullet_42mm.data = bullet_data->bullet_allowance_num_42_mm;
-  coin.data = bullet_data->coin_remaining_num;
-  if (is_red) {
-    red_bullet_17mm_pub_.publish(bullet_17mm);
-    red_bullet_42mm_pub_.publish(bullet_42mm);
-    red_remain_bullet_17mm_pub_.publish(bullet_17mm);
-    red_remain_bullet_42mm_pub_.publish(bullet_42mm);
-    red_total_soc_pub_.publish(coin);
-  } else {
-    blue_bullet_17mm_pub_.publish(bullet_17mm);
-    blue_bullet_42mm_pub_.publish(bullet_42mm);
-    blue_remain_bullet_17mm_pub_.publish(bullet_17mm);
-    blue_remain_bullet_42mm_pub_.publish(bullet_42mm);
-    blue_total_soc_pub_.publish(coin);
-  }
+  uint32_t bits = s->status_bitmask;
+
+  // Bit 0: Assembly
+  msg.enemy_assembly = (bits & 0x01);
+  
+  // Bit 1-2: Central/Ring Highland (0=None, 1=Enemy, 2=Ally)
+  uint8_t ring = (bits >> 1) & 0x03;
+  msg.enemy_ring_highland = (ring == 1); 
+
+  // Bit 3: Trapezoidal
+  msg.enemy_trapezoidal_highland = ((bits >> 3) & 0x01);
+
+  // Bit 4-5: Fort (0=Un, 1=Enemy, 2=Ally, 3=Both)
+  uint8_t fort = (bits >> 4) & 0x03;
+  msg.enemy_fort = (fort == 1 || fort == 3);
+
+  // Bit 6-7: Outpost (0=Un, 1=Enemy, 2=Ally)
+  uint8_t outpost = (bits >> 6) & 0x03;
+  msg.enemy_outpost = (outpost == 1);
+
+  // Bit 9: Flying Slope Pre
+  msg.enemy_flying_slope_pre = ((bits >> 9)  & 0x01);
+
+  // Bit 10: Flying Slope Post
+  msg.enemy_flying_slope_post = ((bits >> 10) & 0x01);
+
+  // Bit 11: Highway Tunnel L
+  msg.enemy_highway_tunnel_l = ((bits >> 11) & 0x01);
+  
+  // Bit 12: Highway Tunnel H
+  msg.enemy_highway_tunnel_h = ((bits >> 12) & 0x01);
+
+  // Bit 13: Highland (High)
+  msg.enemy_central_high = ((bits >> 13) & 0x01);
+
+  // Bit 14: Highland (Fly)
+  msg.enemy_central_low = ((bits >> 14) & 0x01); 
+
+  // Bit 15: Highland (Road)
+  msg.enemy_highway_high = ((bits >> 15) & 0x01);
+
+  enemy_status_pub_.publish(msg);
 }
 
-void RadioRefereeParser::parseRfidStatus(const uint8_t* data, uint16_t length)
+void RadioRefereeParser::parseEnemyBuff(const uint8_t* data, uint16_t length)
 {
-  // =====================
-  // RFID/增益点状态包解析（cmd_id=0x0209，结构体rfid_status_t）
-  // =====================
-  
-  struct RfidStatusRaw
-  {
-    uint32_t field_1;   // First 32 bits of status
-    uint32_t field_2;   // Next 32 bits of status
-    uint32_t field_3;   // Next 32 bits of status
+  // ID: 0x0A05 对方机器人增益
+  struct RobotBuffRaw {
+    uint8_t recovery_percent; 
+    uint16_t cooling_buff;
+    uint8_t def_buff;
+    uint8_t neg_def_buff;
+    uint16_t attack_buff;
   } __packed;
 
-  if (length < sizeof(RfidStatusRaw)) return;
+  // 5 Robots + 1 status byte for sentry
+  struct EnemyBuffRaw {
+    RobotBuffRaw hero;       // 0-6
+    RobotBuffRaw engineer;   // 7-13
+    RobotBuffRaw standard_3; // 14-20
+    RobotBuffRaw standard_4; // 21-27
+    RobotBuffRaw sentry;     // 28-34
+    uint8_t sentry_status;   // 35
+  } __packed;
 
-  const RfidStatusRaw* rfid_data = reinterpret_cast<const RfidStatusRaw*>(data);
+  if (length < sizeof(EnemyBuffRaw)) return;
+  const EnemyBuffRaw* b = reinterpret_cast<const EnemyBuffRaw*>(data);
 
-  // 这里的 bit 定义基于协议文档中的“相对视角”（己方/对方）
-  // 1-11号机(红方): "己方"=Red, "对方"=Blue
-  // 101-111号机(蓝方): "己方"=Blue, "对方"=Red
-  bool is_red = (robot_id_ >= 1 && robot_id_ <= 11);
+  rm_msgs::RadarEnemyBuff msg;
 
-  enum : uint32_t {
-    BIT_ENEMY_RING_HIGHLAND        = 2u,  // 对方环形高地（中央高地占领状态）
-    BIT_ENEMY_TRAPEZOIDAL_HIGHLAND = 4u,  // 对方梯形高地
-    BIT_ENEMY_FLYING_SLOPE_PRE     = 7u,  // 对方飞坡前
-    BIT_ENEMY_FLYING_SLOPE_POST    = 8u,  // 对方飞坡后
-    BIT_ENEMY_CENTRAL_LOW          = 11u, // 对方中央高低(低)
-    BIT_ENEMY_CENTRAL_HIGH         = 12u, // 对方中央高低(高)
-    BIT_ENEMY_HIGHWAY_LOW          = 15u, // 对方公路高低(低)
-    BIT_ENEMY_HIGHWAY_HIGH         = 16u, // 对方公路高低(高)
-    BIT_ENEMY_ASSEMBLY             = 22u, // 对方装配点
-    BIT_CENTRAL                    = 23u, // 中心增益点 (RMUL公共)
-    BIT_ENEMY_FORT                 = 24u, // 对方堡垒
-    BIT_ENEMY_OUTPOST              = 25u, // 对方前哨站
-    BIT_ENEMY_HIGHWAY_TUNNEL_L     = 30u, // 对方公路隧道(低)
-    BIT_ENEMY_HIGHWAY_TUNNEL_H     = 31u, // 对方公路隧道(高)
-    BIT_ENEMY_TRAPEZOIDAL_TUNNEL_L = 32u, // 对方梯形隧道(低)
-    BIT_ENEMY_TRAPEZOIDAL_TUNNEL_H = 33u  // 对方梯形隧道(高)
+  auto convert = [](const RobotBuffRaw& raw, rm_msgs::RadarRobotBuff& out) {
+      out.recovery_percent = raw.recovery_percent;
+      out.cooling_buff = raw.cooling_buff;
+      out.def_buff = raw.def_buff;
+      out.neg_def_buff = raw.neg_def_buff;
+      out.attack_buff = raw.attack_buff;
   };
 
-  std_msgs::Bool msg_val;
-
-  // 1. 公共区域
-  msg_val.data = (rfid_data->field_1 >> BIT_CENTRAL) & 1;
-  central_buff_point_pub_.publish(msg_val);
-
-  // 2. 区分队伍发布 (完整发布所有定义的环境状态)
-  // 提取所有 “对方” (Enemy) 状态
-  bool e_ring_high  = (rfid_data->field_1 >> BIT_ENEMY_RING_HIGHLAND) & 1;
-  bool e_trap_high  = (rfid_data->field_1 >> BIT_ENEMY_TRAPEZOIDAL_HIGHLAND) & 1;
-  bool e_fly_pre    = (rfid_data->field_1 >> BIT_ENEMY_FLYING_SLOPE_PRE) & 1;
-  bool e_fly_post   = (rfid_data->field_1 >> BIT_ENEMY_FLYING_SLOPE_POST) & 1;
-  bool e_cen_low    = (rfid_data->field_1 >> BIT_ENEMY_CENTRAL_LOW) & 1;
-  bool e_cen_high   = (rfid_data->field_1 >> BIT_ENEMY_CENTRAL_HIGH) & 1;
-  bool e_hwy_low    = (rfid_data->field_1 >> BIT_ENEMY_HIGHWAY_LOW) & 1;
-  bool e_hwy_high   = (rfid_data->field_1 >> BIT_ENEMY_HIGHWAY_HIGH) & 1;
-  bool e_assembly   = (rfid_data->field_1 >> BIT_ENEMY_ASSEMBLY) & 1;
-  bool e_fort       = (rfid_data->field_1 >> BIT_ENEMY_FORT) & 1;
-  bool e_outpost    = (rfid_data->field_1 >> BIT_ENEMY_OUTPOST) & 1;
-  bool e_hwy_tun_l  = (rfid_data->field_1 >> BIT_ENEMY_HIGHWAY_TUNNEL_L) & 1;
-  bool e_hwy_tun_h  = (rfid_data->field_1 >> BIT_ENEMY_HIGHWAY_TUNNEL_H) & 1;
-  bool e_trap_tun_l = (rfid_data->field_2 >> (BIT_ENEMY_TRAPEZOIDAL_TUNNEL_L - 32)) & 1;
-  bool e_trap_tun_h = (rfid_data->field_2 >> (BIT_ENEMY_TRAPEZOIDAL_TUNNEL_H - 32)) & 1;
-
-  if (is_red) {
-    // 红方：Ally=Red -> 接收到的“Enemy”信息是Blue的
-    // 发布到 Blue 话题
-    msg_val.data = e_outpost;    blue_outpost_buff_point_pub_.publish(msg_val);
-    msg_val.data = e_fort;       blue_fort_buff_point_pub_.publish(msg_val);
-    msg_val.data = e_ring_high;  blue_wall_pub_.publish(msg_val);
-    msg_val.data = e_trap_high;  blue_trap_high_pub_.publish(msg_val);
-    msg_val.data = e_fly_pre;    blue_fly_pre_pub_.publish(msg_val);
-    msg_val.data = e_fly_post;   blue_fly_post_pub_.publish(msg_val);
-    msg_val.data = e_cen_low;    blue_central_low_pub_.publish(msg_val);
-    msg_val.data = e_cen_high;   blue_central_high_pub_.publish(msg_val);
-    msg_val.data = e_hwy_low;    blue_highway_low_pub_.publish(msg_val);
-    msg_val.data = e_hwy_high;   blue_highway_high_pub_.publish(msg_val);
-    msg_val.data = e_assembly;   blue_assembly_pub_.publish(msg_val);
-    msg_val.data = e_hwy_tun_l;  blue_highway_tunnel_low_pub_.publish(msg_val);
-    msg_val.data = e_hwy_tun_h;  blue_highway_tunnel_high_pub_.publish(msg_val);
-    msg_val.data = e_trap_tun_l; blue_trap_tunnel_low_pub_.publish(msg_val);
-    msg_val.data = e_trap_tun_h; blue_trap_tunnel_high_pub_.publish(msg_val);
-  } else {
-    // 蓝方：Ally=Blue -> 接收到的“Enemy”信息是Red的
-    // 发布到 Red 话题
-    msg_val.data = e_outpost;    red_outpost_buff_point_pub_.publish(msg_val);
-    msg_val.data = e_fort;       red_fort_buff_point_pub_.publish(msg_val);
-    msg_val.data = e_ring_high;  red_wall_pub_.publish(msg_val);
-    msg_val.data = e_trap_high;  red_trap_high_pub_.publish(msg_val);
-    msg_val.data = e_fly_pre;    red_fly_pre_pub_.publish(msg_val);
-    msg_val.data = e_fly_post;   red_fly_post_pub_.publish(msg_val);
-    msg_val.data = e_cen_low;    red_central_low_pub_.publish(msg_val);
-    msg_val.data = e_cen_high;   red_central_high_pub_.publish(msg_val);
-    msg_val.data = e_hwy_low;    red_highway_low_pub_.publish(msg_val);
-    msg_val.data = e_hwy_high;   red_highway_high_pub_.publish(msg_val);
-    msg_val.data = e_assembly;   red_assembly_pub_.publish(msg_val);
-    msg_val.data = e_hwy_tun_l;  red_highway_tunnel_low_pub_.publish(msg_val);
-    msg_val.data = e_hwy_tun_h;  red_highway_tunnel_high_pub_.publish(msg_val);
-    msg_val.data = e_trap_tun_l; red_trap_tunnel_low_pub_.publish(msg_val);
-    msg_val.data = e_trap_tun_h; red_trap_tunnel_high_pub_.publish(msg_val);
-  }
+  convert(b->hero, msg.hero);
+  convert(b->engineer, msg.engineer);
+  convert(b->standard_3, msg.standard_3);
+  convert(b->standard_4, msg.standard_4);
+  convert(b->sentry, msg.sentry);
+  msg.sentry_status = b->sentry_status;
+  
+  enemy_buff_pub_.publish(msg);
 }
-
 
 }  // namespace radio_referee_parser

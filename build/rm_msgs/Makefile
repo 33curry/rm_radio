@@ -113,17 +113,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -134,6 +123,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,45 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named rm_msgs_gennodejs
+
+# Build rule for target.
+rm_msgs_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_gennodejs
+.PHONY : rm_msgs_gennodejs
+
+# fast build rule for target.
+rm_msgs_gennodejs/fast:
+	$(MAKE) -f CMakeFiles/rm_msgs_gennodejs.dir/build.make CMakeFiles/rm_msgs_gennodejs.dir/build
+.PHONY : rm_msgs_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named rm_msgs_generate_messages_nodejs
+
+# Build rule for target.
+rm_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_generate_messages_nodejs
+.PHONY : rm_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rm_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/rm_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rm_msgs_generate_messages_nodejs.dir/build
+.PHONY : rm_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named rm_msgs_genlisp
+
+# Build rule for target.
+rm_msgs_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_genlisp
+.PHONY : rm_msgs_genlisp
+
+# fast build rule for target.
+rm_msgs_genlisp/fast:
+	$(MAKE) -f CMakeFiles/rm_msgs_genlisp.dir/build.make CMakeFiles/rm_msgs_genlisp.dir/build
+.PHONY : rm_msgs_genlisp/fast
 
 #=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_TagMsg
@@ -207,6 +246,19 @@ _rm_msgs_generate_messages_check_deps_LpData/fast:
 .PHONY : _rm_msgs_generate_messages_check_deps_LpData/fast
 
 #=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_RadarEnemyHp
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarEnemyHp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_RadarEnemyHp
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarEnemyHp
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarEnemyHp/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarEnemyHp.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarEnemyHp.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarEnemyHp/fast
+
+#=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_ShootBeforehandCmd
 
 # Build rule for target.
@@ -244,6 +296,32 @@ _rm_msgs_generate_messages_check_deps_ShootState: cmake_check_build_system
 _rm_msgs_generate_messages_check_deps_ShootState/fast:
 	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_ShootState.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_ShootState.dir/build
 .PHONY : _rm_msgs_generate_messages_check_deps_ShootState/fast
+
+#=============================================================================
+# Target rules for targets named rm_msgs_generate_messages_py
+
+# Build rule for target.
+rm_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_generate_messages_py
+.PHONY : rm_msgs_generate_messages_py
+
+# fast build rule for target.
+rm_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/rm_msgs_generate_messages_py.dir/build.make CMakeFiles/rm_msgs_generate_messages_py.dir/build
+.PHONY : rm_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_BalanceState
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_BalanceState: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_BalanceState
+.PHONY : _rm_msgs_generate_messages_check_deps_BalanceState
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_BalanceState/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_BalanceState.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_BalanceState.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_BalanceState/fast
 
 #=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_ShootCmd
@@ -389,6 +467,19 @@ actionlib_generate_messages_eus/fast:
 .PHONY : actionlib_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_RadarEnemyBuff
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarEnemyBuff: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_RadarEnemyBuff
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarEnemyBuff
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarEnemyBuff/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarEnemyBuff.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarEnemyBuff.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarEnemyBuff/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -441,6 +532,19 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_DartRemainingTime
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_DartRemainingTime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_DartRemainingTime
+.PHONY : _rm_msgs_generate_messages_check_deps_DartRemainingTime
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_DartRemainingTime/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_DartRemainingTime.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_DartRemainingTime.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_DartRemainingTime/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
@@ -491,6 +595,19 @@ actionlib_generate_messages_lisp: cmake_check_build_system
 actionlib_generate_messages_lisp/fast:
 	$(MAKE) -f CMakeFiles/actionlib_generate_messages_lisp.dir/build.make CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_RadarCmd
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarCmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_RadarCmd
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarCmd
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarCmd/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarCmd.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarCmd.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarCmd/fast
 
 #=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_TargetDetection
@@ -636,6 +753,32 @@ _rm_msgs_generate_messages_check_deps_LocalHeatState/fast:
 .PHONY : _rm_msgs_generate_messages_check_deps_LocalHeatState/fast
 
 #=============================================================================
+# Target rules for targets named rm_msgs_genpy
+
+# Build rule for target.
+rm_msgs_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_genpy
+.PHONY : rm_msgs_genpy
+
+# fast build rule for target.
+rm_msgs_genpy/fast:
+	$(MAKE) -f CMakeFiles/rm_msgs_genpy.dir/build.make CMakeFiles/rm_msgs_genpy.dir/build
+.PHONY : rm_msgs_genpy/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -660,6 +803,19 @@ tests: cmake_check_build_system
 tests/fast:
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 .PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_RadarEnemyStatus
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarEnemyStatus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_RadarEnemyStatus
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarEnemyStatus
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarEnemyStatus/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarEnemyStatus.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarEnemyStatus.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarEnemyStatus/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_py
@@ -792,6 +948,45 @@ _rm_msgs_generate_messages_check_deps_EngineerFeedback/fast:
 .PHONY : _rm_msgs_generate_messages_check_deps_EngineerFeedback/fast
 
 #=============================================================================
+# Target rules for targets named rm_msgs_generate_messages_lisp
+
+# Build rule for target.
+rm_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_generate_messages_lisp
+.PHONY : rm_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rm_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/rm_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rm_msgs_generate_messages_lisp.dir/build
+.PHONY : rm_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
 
 # Build rule for target.
@@ -803,6 +998,32 @@ _catkin_empty_exported_target: cmake_check_build_system
 _catkin_empty_exported_target/fast:
 	$(MAKE) -f CMakeFiles/_catkin_empty_exported_target.dir/build.make CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
+
+#=============================================================================
+# Target rules for targets named rm_msgs_geneus
+
+# Build rule for target.
+rm_msgs_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_geneus
+.PHONY : rm_msgs_geneus
+
+# fast build rule for target.
+rm_msgs_geneus/fast:
+	$(MAKE) -f CMakeFiles/rm_msgs_geneus.dir/build.make CMakeFiles/rm_msgs_geneus.dir/build
+.PHONY : rm_msgs_geneus/fast
+
+#=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_MultiDofCmd
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_MultiDofCmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_MultiDofCmd
+.PHONY : _rm_msgs_generate_messages_check_deps_MultiDofCmd
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_MultiDofCmd/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_MultiDofCmd.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_MultiDofCmd.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_MultiDofCmd/fast
 
 #=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_TagMsgArray
@@ -1273,6 +1494,19 @@ _rm_msgs_generate_messages_check_deps_ManualToReferee/fast:
 .PHONY : _rm_msgs_generate_messages_check_deps_ManualToReferee/fast
 
 #=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_RadarEnemyPosition
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarEnemyPosition: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_RadarEnemyPosition
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarEnemyPosition
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarEnemyPosition/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarEnemyPosition.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarEnemyPosition.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarEnemyPosition/fast
+
+#=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_RadarData
 
 # Build rule for target.
@@ -1351,6 +1585,19 @@ _rm_msgs_generate_messages_check_deps_ClientMapSendData/fast:
 .PHONY : _rm_msgs_generate_messages_check_deps_ClientMapSendData/fast
 
 #=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_RadarRobotBuff
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarRobotBuff: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_RadarRobotBuff
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarRobotBuff
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarRobotBuff/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarRobotBuff.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarRobotBuff.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarRobotBuff/fast
+
+#=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_ClientMapReceiveData
 
 # Build rule for target.
@@ -1375,32 +1622,6 @@ _rm_msgs_generate_messages_check_deps_MapSentryData: cmake_check_build_system
 _rm_msgs_generate_messages_check_deps_MapSentryData/fast:
 	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_MapSentryData.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_MapSentryData.dir/build
 .PHONY : _rm_msgs_generate_messages_check_deps_MapSentryData/fast
-
-#=============================================================================
-# Target rules for targets named _rm_msgs_generate_messages_check_deps_MultiDofCmd
-
-# Build rule for target.
-_rm_msgs_generate_messages_check_deps_MultiDofCmd: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_MultiDofCmd
-.PHONY : _rm_msgs_generate_messages_check_deps_MultiDofCmd
-
-# fast build rule for target.
-_rm_msgs_generate_messages_check_deps_MultiDofCmd/fast:
-	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_MultiDofCmd.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_MultiDofCmd.dir/build
-.PHONY : _rm_msgs_generate_messages_check_deps_MultiDofCmd/fast
-
-#=============================================================================
-# Target rules for targets named rm_msgs_geneus
-
-# Build rule for target.
-rm_msgs_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_geneus
-.PHONY : rm_msgs_geneus
-
-# fast build rule for target.
-rm_msgs_geneus/fast:
-	$(MAKE) -f CMakeFiles/rm_msgs_geneus.dir/build.make CMakeFiles/rm_msgs_geneus.dir/build
-.PHONY : rm_msgs_geneus/fast
 
 #=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_SentryInfo
@@ -1546,6 +1767,45 @@ _rm_msgs_generate_messages_check_deps_PowerManagementUnknownExceptionData/fast:
 .PHONY : _rm_msgs_generate_messages_check_deps_PowerManagementUnknownExceptionData/fast
 
 #=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_RadarEnemyBulletAllowance
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarEnemyBulletAllowance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_RadarEnemyBulletAllowance
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarEnemyBulletAllowance
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarEnemyBulletAllowance/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarEnemyBulletAllowance.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarEnemyBulletAllowance.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarEnemyBulletAllowance/fast
+
+#=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_RadarRadioData
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarRadioData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_RadarRadioData
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarRadioData
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarRadioData/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarRadioData.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarRadioData.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarRadioData/fast
+
+#=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_CurrentSentryPosData
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_CurrentSentryPosData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_CurrentSentryPosData
+.PHONY : _rm_msgs_generate_messages_check_deps_CurrentSentryPosData
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_CurrentSentryPosData/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_CurrentSentryPosData.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_CurrentSentryPosData.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_CurrentSentryPosData/fast
+
+#=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_SentryAttackingTarget
 
 # Build rule for target.
@@ -1637,32 +1897,6 @@ rm_msgs_generate_messages_eus/fast:
 .PHONY : rm_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named _rm_msgs_generate_messages_check_deps_BalanceState
-
-# Build rule for target.
-_rm_msgs_generate_messages_check_deps_BalanceState: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_BalanceState
-.PHONY : _rm_msgs_generate_messages_check_deps_BalanceState
-
-# fast build rule for target.
-_rm_msgs_generate_messages_check_deps_BalanceState/fast:
-	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_BalanceState.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_BalanceState.dir/build
-.PHONY : _rm_msgs_generate_messages_check_deps_BalanceState/fast
-
-#=============================================================================
-# Target rules for targets named rm_msgs_generate_messages_py
-
-# Build rule for target.
-rm_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_generate_messages_py
-.PHONY : rm_msgs_generate_messages_py
-
-# fast build rule for target.
-rm_msgs_generate_messages_py/fast:
-	$(MAKE) -f CMakeFiles/rm_msgs_generate_messages_py.dir/build.make CMakeFiles/rm_msgs_generate_messages_py.dir/build
-.PHONY : rm_msgs_generate_messages_py/fast
-
-#=============================================================================
 # Target rules for targets named rm_msgs_gencpp
 
 # Build rule for target.
@@ -1674,110 +1908,6 @@ rm_msgs_gencpp: cmake_check_build_system
 rm_msgs_gencpp/fast:
 	$(MAKE) -f CMakeFiles/rm_msgs_gencpp.dir/build.make CMakeFiles/rm_msgs_gencpp.dir/build
 .PHONY : rm_msgs_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_eus
-
-# Build rule for target.
-std_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
-
-# Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named rm_msgs_generate_messages_lisp
-
-# Build rule for target.
-rm_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_generate_messages_lisp
-.PHONY : rm_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rm_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/rm_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rm_msgs_generate_messages_lisp.dir/build
-.PHONY : rm_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named rm_msgs_genlisp
-
-# Build rule for target.
-rm_msgs_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_genlisp
-.PHONY : rm_msgs_genlisp
-
-# fast build rule for target.
-rm_msgs_genlisp/fast:
-	$(MAKE) -f CMakeFiles/rm_msgs_genlisp.dir/build.make CMakeFiles/rm_msgs_genlisp.dir/build
-.PHONY : rm_msgs_genlisp/fast
-
-#=============================================================================
-# Target rules for targets named rm_msgs_generate_messages_nodejs
-
-# Build rule for target.
-rm_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_generate_messages_nodejs
-.PHONY : rm_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rm_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f CMakeFiles/rm_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rm_msgs_generate_messages_nodejs.dir/build
-.PHONY : rm_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named rm_msgs_gennodejs
-
-# Build rule for target.
-rm_msgs_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_gennodejs
-.PHONY : rm_msgs_gennodejs
-
-# fast build rule for target.
-rm_msgs_gennodejs/fast:
-	$(MAKE) -f CMakeFiles/rm_msgs_gennodejs.dir/build.make CMakeFiles/rm_msgs_gennodejs.dir/build
-.PHONY : rm_msgs_gennodejs/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_nodejs
-
-# Build rule for target.
-std_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named rm_msgs_genpy
-
-# Build rule for target.
-rm_msgs_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_genpy
-.PHONY : rm_msgs_genpy
-
-# fast build rule for target.
-rm_msgs_genpy/fast:
-	$(MAKE) -f CMakeFiles/rm_msgs_genpy.dir/build.make CMakeFiles/rm_msgs_genpy.dir/build
-.PHONY : rm_msgs_genpy/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -1841,12 +1971,21 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... rm_msgs_gennodejs"
+	@echo "... rm_msgs_generate_messages_nodejs"
+	@echo "... rm_msgs_genlisp"
 	@echo "... _rm_msgs_generate_messages_check_deps_TagMsg"
 	@echo "... _rm_msgs_generate_messages_check_deps_TofRadarData"
 	@echo "... _rm_msgs_generate_messages_check_deps_LpData"
+	@echo "... _rm_msgs_generate_messages_check_deps_RadarEnemyHp"
 	@echo "... _rm_msgs_generate_messages_check_deps_ShootBeforehandCmd"
 	@echo "... _rm_msgs_generate_messages_check_deps_ChassisCmd"
 	@echo "... _rm_msgs_generate_messages_check_deps_ShootState"
+	@echo "... rm_msgs_generate_messages_py"
+	@echo "... _rm_msgs_generate_messages_check_deps_BalanceState"
 	@echo "... _rm_msgs_generate_messages_check_deps_ShootCmd"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... _rm_msgs_generate_messages_check_deps_GameRobotPosData"
@@ -1858,14 +1997,17 @@ help:
 	@echo "... _rm_msgs_generate_messages_check_deps_EngineerActionResult"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_eus"
+	@echo "... _rm_msgs_generate_messages_check_deps_RadarEnemyBuff"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... _rm_msgs_generate_messages_check_deps_MovingAverageData"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... _rm_msgs_generate_messages_check_deps_DartRemainingTime"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... _rm_msgs_generate_messages_check_deps_GameRobotHp"
 	@echo "... actionlib_generate_messages_lisp"
+	@echo "... _rm_msgs_generate_messages_check_deps_RadarCmd"
 	@echo "... _rm_msgs_generate_messages_check_deps_TargetDetection"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
@@ -1877,8 +2019,11 @@ help:
 	@echo "... _rm_msgs_generate_messages_check_deps_GpioData"
 	@echo "... _rm_msgs_generate_messages_check_deps_BusState"
 	@echo "... _rm_msgs_generate_messages_check_deps_LocalHeatState"
+	@echo "... rm_msgs_genpy"
+	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... tests"
+	@echo "... _rm_msgs_generate_messages_check_deps_RadarEnemyStatus"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... _rm_msgs_generate_messages_check_deps_SentryDeviate"
@@ -1889,7 +2034,12 @@ help:
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... _rm_msgs_generate_messages_check_deps_TrackData"
 	@echo "... _rm_msgs_generate_messages_check_deps_EngineerFeedback"
+	@echo "... rm_msgs_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... roscpp_generate_messages_lisp"
 	@echo "... _catkin_empty_exported_target"
+	@echo "... rm_msgs_geneus"
+	@echo "... _rm_msgs_generate_messages_check_deps_MultiDofCmd"
 	@echo "... _rm_msgs_generate_messages_check_deps_TagMsgArray"
 	@echo "... _rm_msgs_generate_messages_check_deps_KalmanData"
 	@echo "... _rm_msgs_generate_messages_check_deps_LegCmd"
@@ -1920,23 +2070,22 @@ help:
 	@echo "... _rm_msgs_generate_messages_check_deps_DartInfo"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... _rm_msgs_generate_messages_check_deps_BulletAllowance"
-	@echo "... rebuild_cache"
 	@echo "... _rm_msgs_generate_messages_check_deps_TargetDetectionArray"
 	@echo "... _rm_msgs_generate_messages_check_deps_ShootData"
 	@echo "... _rm_msgs_generate_messages_check_deps_RfidStatus"
 	@echo "... _rm_msgs_generate_messages_check_deps_CameraStatus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... _rm_msgs_generate_messages_check_deps_ManualToReferee"
+	@echo "... _rm_msgs_generate_messages_check_deps_RadarEnemyPosition"
 	@echo "... _rm_msgs_generate_messages_check_deps_RadarData"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... _rm_msgs_generate_messages_check_deps_DartStatus"
 	@echo "... _rm_msgs_generate_messages_check_deps_RobotsPositionData"
 	@echo "... _rm_msgs_generate_messages_check_deps_DbusData"
 	@echo "... _rm_msgs_generate_messages_check_deps_ClientMapSendData"
+	@echo "... _rm_msgs_generate_messages_check_deps_RadarRobotBuff"
 	@echo "... _rm_msgs_generate_messages_check_deps_ClientMapReceiveData"
 	@echo "... _rm_msgs_generate_messages_check_deps_MapSentryData"
-	@echo "... _rm_msgs_generate_messages_check_deps_MultiDofCmd"
-	@echo "... rm_msgs_geneus"
 	@echo "... _rm_msgs_generate_messages_check_deps_SentryInfo"
 	@echo "... _rm_msgs_generate_messages_check_deps_RadarInfo"
 	@echo "... _rm_msgs_generate_messages_check_deps_SentryCmd"
@@ -1948,6 +2097,9 @@ help:
 	@echo "... _rm_msgs_generate_messages_check_deps_GimbalDesError"
 	@echo "... _rm_msgs_generate_messages_check_deps_PowerManagementProcessStackOverflowData"
 	@echo "... _rm_msgs_generate_messages_check_deps_PowerManagementUnknownExceptionData"
+	@echo "... _rm_msgs_generate_messages_check_deps_RadarEnemyBulletAllowance"
+	@echo "... _rm_msgs_generate_messages_check_deps_RadarRadioData"
+	@echo "... _rm_msgs_generate_messages_check_deps_CurrentSentryPosData"
 	@echo "... _rm_msgs_generate_messages_check_deps_SentryAttackingTarget"
 	@echo "... _rm_msgs_generate_messages_check_deps_EngineerGoal"
 	@echo "... _rm_msgs_generate_messages_check_deps_ContinousDetectorSwitch"
@@ -1955,19 +2107,7 @@ help:
 	@echo "... rm_msgs_generate_messages_cpp"
 	@echo "... _rm_msgs_generate_messages_check_deps_EngineerResult"
 	@echo "... rm_msgs_generate_messages_eus"
-	@echo "... _rm_msgs_generate_messages_check_deps_BalanceState"
-	@echo "... rm_msgs_generate_messages_py"
 	@echo "... rm_msgs_gencpp"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... rm_msgs_generate_messages_lisp"
-	@echo "... rm_msgs_genlisp"
-	@echo "... rm_msgs_generate_messages_nodejs"
-	@echo "... rm_msgs_gennodejs"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... rm_msgs_genpy"
-	@echo "... test"
-	@echo "... edit_cache"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"

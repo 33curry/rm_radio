@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "rm_msgs: 71 messages, 6 services")
+message(STATUS "rm_msgs: 81 messages, 6 services")
 
 set(MSG_I_FLAGS "-Irm_msgs:/home/robot/radio_ws/src/rm_control/rm_msgs/msg;-Irm_msgs:/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection;-Irm_msgs:/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee;-Irm_msgs:/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg")
 
@@ -39,12 +39,12 @@ add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ExchangerMsg.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ExchangerMsg.msg" "geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ExchangerMsg.msg" "geometry_msgs/Quaternion:geometry_msgs/Pose:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ChassisCmd.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ChassisCmd.msg" "geometry_msgs/Accel:geometry_msgs/Vector3"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ChassisCmd.msg" "geometry_msgs/Vector3:geometry_msgs/Accel"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ShootCmd.msg" NAME_WE)
@@ -64,7 +64,7 @@ add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalCmd.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalCmd.msg" "geometry_msgs/Point:std_msgs/Header:geometry_msgs/PointStamped"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalCmd.msg" "geometry_msgs/PointStamped:geometry_msgs/Point:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalDesError.msg" NAME_WE)
@@ -94,7 +94,7 @@ add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/KalmanData.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/KalmanData.msg" "geometry_msgs/Pose:geometry_msgs/Twist:geometry_msgs/Vector3:geometry_msgs/Point:std_msgs/Header:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/KalmanData.msg" "geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Twist:geometry_msgs/Vector3:geometry_msgs/Pose:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/MovingAverageData.msg" NAME_WE)
@@ -119,12 +119,12 @@ add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg" "geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg" "geometry_msgs/Quaternion:geometry_msgs/Pose:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsgArray.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsgArray.msg" "geometry_msgs/Pose:rm_msgs/TagMsg:geometry_msgs/Point:std_msgs/Header:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsgArray.msg" "geometry_msgs/Quaternion:std_msgs/Header:rm_msgs/TagMsg:geometry_msgs/Pose:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/SentryDeviate.msg" NAME_WE)
@@ -139,17 +139,17 @@ add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg" "geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg" "geometry_msgs/Quaternion:geometry_msgs/Pose:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetectionArray.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetectionArray.msg" "geometry_msgs/Pose:rm_msgs/TargetDetection:geometry_msgs/Point:std_msgs/Header:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetectionArray.msg" "geometry_msgs/Quaternion:std_msgs/Header:rm_msgs/TargetDetection:geometry_msgs/Pose:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TrackData.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TrackData.msg" "geometry_msgs/Point:std_msgs/Header:geometry_msgs/Quaternion:geometry_msgs/Vector3"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TrackData.msg" "geometry_msgs/Vector3:geometry_msgs/Quaternion:geometry_msgs/Point:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CapacityData.msg" NAME_WE)
@@ -337,24 +337,74 @@ add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/PowerManagementUnknownExceptionData.msg" ""
 )
 
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg" NAME_WE)
+add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg" "rm_msgs/RadarRobotBuff"
+)
+
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg" NAME_WE)
+add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg" ""
+)
+
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg" NAME_WE)
+add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg" ""
+)
+
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg" NAME_WE)
+add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg" ""
+)
+
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg" NAME_WE)
+add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg" ""
+)
+
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg" NAME_WE)
+add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg" ""
+)
+
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg" NAME_WE)
+add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg" ""
+)
+
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg" NAME_WE)
+add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg" ""
+)
+
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg" NAME_WE)
+add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg" ""
+)
+
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg" NAME_WE)
+add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg" ""
+)
+
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg" "actionlib_msgs/GoalID:rm_msgs/EngineerActionGoal:rm_msgs/EngineerActionFeedback:rm_msgs/EngineerActionResult:rm_msgs/EngineerResult:rm_msgs/EngineerGoal:std_msgs/Header:rm_msgs/EngineerFeedback:actionlib_msgs/GoalStatus"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg" "rm_msgs/EngineerGoal:rm_msgs/EngineerResult:std_msgs/Header:rm_msgs/EngineerActionFeedback:actionlib_msgs/GoalStatus:rm_msgs/EngineerActionResult:actionlib_msgs/GoalID:rm_msgs/EngineerActionGoal:rm_msgs/EngineerFeedback"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg" "actionlib_msgs/GoalID:std_msgs/Header:rm_msgs/EngineerGoal"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg" "rm_msgs/EngineerGoal:actionlib_msgs/GoalID:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg" "actionlib_msgs/GoalID:std_msgs/Header:actionlib_msgs/GoalStatus:rm_msgs/EngineerResult"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg" "actionlib_msgs/GoalStatus:rm_msgs/EngineerResult:actionlib_msgs/GoalID:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg" NAME_WE)
 add_custom_target(_rm_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg" "actionlib_msgs/GoalID:std_msgs/Header:rm_msgs/EngineerFeedback:actionlib_msgs/GoalStatus"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rm_msgs" "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg" "actionlib_msgs/GoalStatus:rm_msgs/EngineerFeedback:actionlib_msgs/GoalID:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg" NAME_WE)
@@ -435,13 +485,13 @@ _generate_msg_cpp(rm_msgs
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ExchangerMsg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ChassisCmd.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Accel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Accel.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
@@ -465,7 +515,7 @@ _generate_msg_cpp(rm_msgs
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalCmd.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PointStamped.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PointStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
@@ -501,7 +551,7 @@ _generate_msg_cpp(rm_msgs
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/KalmanData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
@@ -531,13 +581,13 @@ _generate_msg_cpp(rm_msgs
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsgArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
@@ -555,19 +605,19 @@ _generate_msg_cpp(rm_msgs
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetectionArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TrackData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
@@ -793,27 +843,87 @@ _generate_msg_cpp(rm_msgs
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg"
+  "${MSG_I_FLAGS}"
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_cpp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_cpp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_cpp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_cpp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_cpp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_cpp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_cpp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_cpp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_cpp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_cpp(rm_msgs
@@ -1013,6 +1123,26 @@ get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/ms
 add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/PowerManagementUnknownExceptionData.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_cpp _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg" NAME_WE)
@@ -1076,13 +1206,13 @@ _generate_msg_eus(rm_msgs
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ExchangerMsg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ChassisCmd.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Accel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Accel.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
@@ -1106,7 +1236,7 @@ _generate_msg_eus(rm_msgs
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalCmd.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PointStamped.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PointStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
@@ -1142,7 +1272,7 @@ _generate_msg_eus(rm_msgs
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/KalmanData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
@@ -1172,13 +1302,13 @@ _generate_msg_eus(rm_msgs
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsgArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
@@ -1196,19 +1326,19 @@ _generate_msg_eus(rm_msgs
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetectionArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TrackData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
@@ -1434,27 +1564,87 @@ _generate_msg_eus(rm_msgs
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg"
+  "${MSG_I_FLAGS}"
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_eus(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_eus(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_eus(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_eus(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_eus(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_eus(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_eus(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_eus(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_eus(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_eus(rm_msgs
@@ -1654,6 +1844,26 @@ get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/ms
 add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/PowerManagementUnknownExceptionData.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_eus _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg" NAME_WE)
@@ -1717,13 +1927,13 @@ _generate_msg_lisp(rm_msgs
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ExchangerMsg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ChassisCmd.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Accel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Accel.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
@@ -1747,7 +1957,7 @@ _generate_msg_lisp(rm_msgs
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalCmd.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PointStamped.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PointStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
@@ -1783,7 +1993,7 @@ _generate_msg_lisp(rm_msgs
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/KalmanData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
@@ -1813,13 +2023,13 @@ _generate_msg_lisp(rm_msgs
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsgArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
@@ -1837,19 +2047,19 @@ _generate_msg_lisp(rm_msgs
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetectionArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TrackData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
@@ -2075,27 +2285,87 @@ _generate_msg_lisp(rm_msgs
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg"
+  "${MSG_I_FLAGS}"
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_lisp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_lisp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_lisp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_lisp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_lisp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_lisp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_lisp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_lisp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_lisp(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_lisp(rm_msgs
@@ -2295,6 +2565,26 @@ get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/ms
 add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/PowerManagementUnknownExceptionData.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_lisp _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg" NAME_WE)
@@ -2358,13 +2648,13 @@ _generate_msg_nodejs(rm_msgs
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ExchangerMsg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ChassisCmd.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Accel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Accel.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
@@ -2388,7 +2678,7 @@ _generate_msg_nodejs(rm_msgs
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalCmd.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PointStamped.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PointStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
@@ -2424,7 +2714,7 @@ _generate_msg_nodejs(rm_msgs
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/KalmanData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
@@ -2454,13 +2744,13 @@ _generate_msg_nodejs(rm_msgs
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsgArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
@@ -2478,19 +2768,19 @@ _generate_msg_nodejs(rm_msgs
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetectionArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TrackData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
@@ -2716,27 +3006,87 @@ _generate_msg_nodejs(rm_msgs
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg"
+  "${MSG_I_FLAGS}"
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_nodejs(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_nodejs(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_nodejs(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_nodejs(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_nodejs(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_nodejs(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_nodejs(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_nodejs(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_nodejs(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_nodejs(rm_msgs
@@ -2936,6 +3286,26 @@ get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/ms
 add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/PowerManagementUnknownExceptionData.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_nodejs _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg" NAME_WE)
@@ -2999,13 +3369,13 @@ _generate_msg_py(rm_msgs
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ExchangerMsg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/ChassisCmd.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Accel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Accel.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
@@ -3029,7 +3399,7 @@ _generate_msg_py(rm_msgs
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalCmd.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PointStamped.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PointStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
@@ -3065,7 +3435,7 @@ _generate_msg_py(rm_msgs
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/KalmanData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
@@ -3095,13 +3465,13 @@ _generate_msg_py(rm_msgs
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsgArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/TagMsg.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
@@ -3119,19 +3489,19 @@ _generate_msg_py(rm_msgs
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetectionArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TargetDetection.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/detection/TrackData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
@@ -3357,27 +3727,87 @@ _generate_msg_py(rm_msgs
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg"
+  "${MSG_I_FLAGS}"
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_py(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_py(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_py(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_py(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_py(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_py(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_py(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_py(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_py(rm_msgs
+  "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
+)
+_generate_msg_py(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rm_msgs
 )
 _generate_msg_py(rm_msgs
@@ -3576,6 +4006,26 @@ add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_d
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/PowerManagementSystemExceptionData.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/PowerManagementUnknownExceptionData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBuff.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyBulletAllowance.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyHp.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyPosition.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarEnemyStatus.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRobotBuff.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarCmd.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarRadioData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/CurrentSentryPosData.msg" NAME_WE)
+add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/DartRemainingTime.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot/radio_ws/devel/.private/rm_msgs/share/rm_msgs/msg/EngineerAction.msg" NAME_WE)
 add_dependencies(rm_msgs_generate_messages_py _rm_msgs_generate_messages_check_deps_${_filename})
