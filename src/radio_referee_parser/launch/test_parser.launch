@@ -1,0 +1,12 @@
+<launch>
+    <!-- 1. 启动 Nodelet Manager -->
+    <node pkg="nodelet" type="nodelet" name="radio_nodelet_manager" args="manager" output="screen"/>
+
+    <!-- 2. 加载 Parser Nodelet -->
+    <node pkg="nodelet" type="nodelet" name="radio_referee_parser"
+          args="load radio_referee_parser/RadioRefereeParser radio_nodelet_manager"
+          output="screen">
+        <!-- 接收 Python 脚本伪造的数据 -->
+        <remap from="/radio/referee_data" to="/radio/raw_data"/>
+    </node>
+</launch>

@@ -1,0 +1,246 @@
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/command_sender.h:66[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee_base.h:9[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee_base.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:[m[K In member function ‘[01m[Kvoid rm_common::HeatLimit::setCoolingHeatOfShooter(rm_msgs::PowerHeatData)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:119:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst PowerHeatData[m[K’ {aka ‘[01m[Kconst struct rm_msgs::PowerHeatData_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kshooter_id_2_17_mm_cooling_heat[m[K’; did you mean ‘[01m[Kshooter_id_1_17_mm_cooling_heat[m[K’?
+  119 |       shooter_cooling_heat_ = data.[01;31m[Kshooter_id_2_17_mm_cooling_heat[m[K;
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                    [32m[Kshooter_id_1_17_mm_cooling_heat[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee_base.h:9[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee_base.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/command_sender.h:[m[K In constructor ‘[01m[Krm_common::DoubleBarrelCommandSender::DoubleBarrelCommandSender(ros::NodeHandle&)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/command_sender.h:876:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kcheck_switch[m[K’ was not declared in this scope; did you mean ‘[01m[KcheckSwitch[m[K’?
+  876 |     barrel_nh.getParam("check_switch_threshold", [01;31m[Kcheck_switch[m[K  _threshold_);
+      |                                                  [01;31m[K^~~~~~~~~~~~[m[K
+      |                                                  [32m[KcheckSwitch[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/data.h:53[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/graph.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/graph.cpp:4[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_elevated_ground_state[m[K’ has changed in GCC 4.4
+  279 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_point_state[m[K’ has changed in GCC 4.4
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:312:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::dart_current_target[m[K’ has changed in GCC 4.4
+  312 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/data.h:53[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee.h:42[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee.cpp:37[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_elevated_ground_state[m[K’ has changed in GCC 4.4
+  279 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_point_state[m[K’ has changed in GCC 4.4
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:312:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::dart_current_target[m[K’ has changed in GCC 4.4
+  312 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/command_sender.h:66[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee_base.h:9[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee.h:43[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee.cpp:37[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:[m[K In member function ‘[01m[Kvoid rm_common::HeatLimit::setCoolingHeatOfShooter(rm_msgs::PowerHeatData)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:119:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst PowerHeatData[m[K’ {aka ‘[01m[Kconst struct rm_msgs::PowerHeatData_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kshooter_id_2_17_mm_cooling_heat[m[K’; did you mean ‘[01m[Kshooter_id_1_17_mm_cooling_heat[m[K’?
+  119 |       shooter_cooling_heat_ = data.[01;31m[Kshooter_id_2_17_mm_cooling_heat[m[K;
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                    [32m[Kshooter_id_1_17_mm_cooling_heat[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee_base.h:9[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee.h:43[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee.cpp:37[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/command_sender.h:[m[K In constructor ‘[01m[Krm_common::DoubleBarrelCommandSender::DoubleBarrelCommandSender(ros::NodeHandle&)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/command_sender.h:876:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kcheck_switch[m[K’ was not declared in this scope; did you mean ‘[01m[KcheckSwitch[m[K’?
+  876 |     barrel_nh.getParam("check_switch_threshold", [01;31m[Kcheck_switch[m[K  _threshold_);
+      |                                                  [01;31m[K^~~~~~~~~~~~[m[K
+      |                                                  [32m[KcheckSwitch[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:12[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/ui_base.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:[m[K In member function ‘[01m[Kvoid rm_common::HeatLimit::setCoolingHeatOfShooter(rm_msgs::PowerHeatData)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:119:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst PowerHeatData[m[K’ {aka ‘[01m[Kconst struct rm_msgs::PowerHeatData_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kshooter_id_2_17_mm_cooling_heat[m[K’; did you mean ‘[01m[Kshooter_id_1_17_mm_cooling_heat[m[K’?
+  119 |       shooter_cooling_heat_ = data.[01;31m[Kshooter_id_2_17_mm_cooling_heat[m[K;
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                    [32m[Kshooter_id_1_17_mm_cooling_heat[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:12[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/interactive_data.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/interactive_data.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:[m[K In member function ‘[01m[Kvoid rm_common::HeatLimit::setCoolingHeatOfShooter(rm_msgs::PowerHeatData)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:119:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst PowerHeatData[m[K’ {aka ‘[01m[Kconst struct rm_msgs::PowerHeatData_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kshooter_id_2_17_mm_cooling_heat[m[K’; did you mean ‘[01m[Kshooter_id_1_17_mm_cooling_heat[m[K’?
+  119 |       shooter_cooling_heat_ = data.[01;31m[Kshooter_id_2_17_mm_cooling_heat[m[K;
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                    [32m[Kshooter_id_1_17_mm_cooling_heat[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:12[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/trigger_change_ui.h:6[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/trigger_change_ui.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:[m[K In member function ‘[01m[Kvoid rm_common::HeatLimit::setCoolingHeatOfShooter(rm_msgs::PowerHeatData)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:119:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst PowerHeatData[m[K’ {aka ‘[01m[Kconst struct rm_msgs::PowerHeatData_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kshooter_id_2_17_mm_cooling_heat[m[K’; did you mean ‘[01m[Kshooter_id_1_17_mm_cooling_heat[m[K’?
+  119 |       shooter_cooling_heat_ = data.[01;31m[Kshooter_id_2_17_mm_cooling_heat[m[K;
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                    [32m[Kshooter_id_1_17_mm_cooling_heat[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/data.h:53[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee.h:42[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/main.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_elevated_ground_state[m[K’ has changed in GCC 4.4
+  279 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_point_state[m[K’ has changed in GCC 4.4
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:312:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::dart_current_target[m[K’ has changed in GCC 4.4
+  312 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/data.h:53[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/graph.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:15[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/ui_base.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:[m[K At global scope:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_elevated_ground_state[m[K’ has changed in GCC 4.4
+  279 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_point_state[m[K’ has changed in GCC 4.4
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:312:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::dart_current_target[m[K’ has changed in GCC 4.4
+  312 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/data.h:53[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/graph.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:15[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/interactive_data.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/interactive_data.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:[m[K At global scope:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_elevated_ground_state[m[K’ has changed in GCC 4.4
+  279 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_point_state[m[K’ has changed in GCC 4.4
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:312:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::dart_current_target[m[K’ has changed in GCC 4.4
+  312 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/data.h:53[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/graph.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:15[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/trigger_change_ui.h:6[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/trigger_change_ui.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:[m[K At global scope:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_elevated_ground_state[m[K’ has changed in GCC 4.4
+  279 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_point_state[m[K’ has changed in GCC 4.4
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:312:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::dart_current_target[m[K’ has changed in GCC 4.4
+  312 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/command_sender.h:66[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee_base.h:9[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee.h:43[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/main.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:[m[K In member function ‘[01m[Kvoid rm_common::HeatLimit::setCoolingHeatOfShooter(rm_msgs::PowerHeatData)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:119:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst PowerHeatData[m[K’ {aka ‘[01m[Kconst struct rm_msgs::PowerHeatData_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kshooter_id_2_17_mm_cooling_heat[m[K’; did you mean ‘[01m[Kshooter_id_1_17_mm_cooling_heat[m[K’?
+  119 |       shooter_cooling_heat_ = data.[01;31m[Kshooter_id_2_17_mm_cooling_heat[m[K;
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                    [32m[Kshooter_id_1_17_mm_cooling_heat[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee_base.h:9[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee.h:43[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/main.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/command_sender.h:[m[K In constructor ‘[01m[Krm_common::DoubleBarrelCommandSender::DoubleBarrelCommandSender(ros::NodeHandle&)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/command_sender.h:876:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kcheck_switch[m[K’ was not declared in this scope; did you mean ‘[01m[KcheckSwitch[m[K’?
+  876 |     barrel_nh.getParam("check_switch_threshold", [01;31m[Kcheck_switch[m[K  _threshold_);
+      |                                                  [01;31m[K^~~~~~~~~~~~[m[K
+      |                                                  [32m[KcheckSwitch[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:12[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/time_change_ui.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/time_change_ui.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:[m[K In member function ‘[01m[Kvoid rm_common::HeatLimit::setCoolingHeatOfShooter(rm_msgs::PowerHeatData)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:119:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst PowerHeatData[m[K’ {aka ‘[01m[Kconst struct rm_msgs::PowerHeatData_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kshooter_id_2_17_mm_cooling_heat[m[K’; did you mean ‘[01m[Kshooter_id_1_17_mm_cooling_heat[m[K’?
+  119 |       shooter_cooling_heat_ = data.[01;31m[Kshooter_id_2_17_mm_cooling_heat[m[K;
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                    [32m[Kshooter_id_1_17_mm_cooling_heat[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:12[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/flash_ui.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:[m[K In member function ‘[01m[Kvoid rm_common::HeatLimit::setCoolingHeatOfShooter(rm_msgs::PowerHeatData)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_common/include/rm_common/decision/heat_limit.h:119:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst PowerHeatData[m[K’ {aka ‘[01m[Kconst struct rm_msgs::PowerHeatData_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kshooter_id_2_17_mm_cooling_heat[m[K’; did you mean ‘[01m[Kshooter_id_1_17_mm_cooling_heat[m[K’?
+  119 |       shooter_cooling_heat_ = data.[01;31m[Kshooter_id_2_17_mm_cooling_heat[m[K;
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                    [32m[Kshooter_id_1_17_mm_cooling_heat[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/data.h:53[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/graph.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:15[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/time_change_ui.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/time_change_ui.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:[m[K At global scope:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_elevated_ground_state[m[K’ has changed in GCC 4.4
+  279 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_point_state[m[K’ has changed in GCC 4.4
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:312:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::dart_current_target[m[K’ has changed in GCC 4.4
+  312 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/data.h:53[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/graph.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:15[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/referee_base.h:11[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee_base.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:[m[K At global scope:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_elevated_ground_state[m[K’ has changed in GCC 4.4
+  279 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_point_state[m[K’ has changed in GCC 4.4
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:312:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::dart_current_target[m[K’ has changed in GCC 4.4
+  312 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+In file included from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/data.h:53[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/graph.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/ui_base.h:15[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/ui/flash_ui.h:7[m[K,
+                 from [01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:5[m[K:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:[m[K At global scope:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_elevated_ground_state[m[K’ has changed in GCC 4.4
+  279 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:279:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::central_point_state[m[K’ has changed in GCC 4.4
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/include/rm_referee/common/protocol.h:312:1:[m[K [01;36m[Knote: [m[Koffset of packed bit-field ‘[01m[Krm_referee::<unnamed struct>::dart_current_target[m[K’ has changed in GCC 4.4
+  312 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:[m[K In member function ‘[01m[Kvoid rm_referee::HeroHitFlashUi::updateHittingConfig(const GameRobotHp&)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:174:23:[m[K [01;31m[Kerror: [m[K‘[01m[Krm_msgs::GameRobotHp[m[K’ {aka ‘[01m[Kstruct rm_msgs::GameRobotHp_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kred_outpost_hp[m[K’
+  174 |         (last_hp_msg_.[01;31m[Kred_outpost_hp[m[K - msg.red_outpost_hp > 190 || last_hp_msg_.red_base_hp - msg.red_base_hp > 190);
+      |                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:174:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst GameRobotHp[m[K’ {aka ‘[01m[Kconst struct rm_msgs::GameRobotHp_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kred_outpost_hp[m[K’
+  174 |         (last_hp_msg_.red_outpost_hp - msg.[01;31m[Kred_outpost_hp[m[K > 190 || last_hp_msg_.red_base_hp - msg.red_base_hp > 190);
+      |                                            [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:174:81:[m[K [01;31m[Kerror: [m[K‘[01m[Krm_msgs::GameRobotHp[m[K’ {aka ‘[01m[Kstruct rm_msgs::GameRobotHp_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kred_base_hp[m[K’
+  174 |         (last_hp_msg_.red_outpost_hp - msg.red_outpost_hp > 190 || last_hp_msg_.[01;31m[Kred_base_hp[m[K - msg.red_base_hp > 190);
+      |                                                                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:174:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst GameRobotHp[m[K’ {aka ‘[01m[Kconst struct rm_msgs::GameRobotHp_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kred_base_hp[m[K’
+  174 |         (last_hp_msg_.red_outpost_hp - msg.red_outpost_hp > 190 || last_hp_msg_.red_base_hp - msg.[01;31m[Kred_base_hp[m[K > 190);
+      |                                                                                                   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:178:29:[m[K [01;31m[Kerror: [m[K‘[01m[Krm_msgs::GameRobotHp[m[K’ {aka ‘[01m[Kstruct rm_msgs::GameRobotHp_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kblue_outpost_hp[m[K’; did you mean ‘[01m[Kally_outpost_HP[m[K’?
+  178 |     hitted_ = (last_hp_msg_.[01;31m[Kblue_outpost_hp[m[K - msg.blue_outpost_hp > 190 ||
+      |                             [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                             [32m[Kally_outpost_HP[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:178:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst GameRobotHp[m[K’ {aka ‘[01m[Kconst struct rm_msgs::GameRobotHp_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kblue_outpost_hp[m[K’; did you mean ‘[01m[Kally_outpost_HP[m[K’?
+  178 |     hitted_ = (last_hp_msg_.blue_outpost_hp - msg.[01;31m[Kblue_outpost_hp[m[K > 190 ||
+      |                                                   [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                                   [32m[Kally_outpost_HP[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:179:29:[m[K [01;31m[Kerror: [m[K‘[01m[Krm_msgs::GameRobotHp[m[K’ {aka ‘[01m[Kstruct rm_msgs::GameRobotHp_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kblue_base_hp[m[K’
+  179 |                last_hp_msg_.[01;31m[Kblue_base_hp[m[K - msg.blue_base_hp > 190);
+      |                             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/ui/flash_ui.cpp:179:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst GameRobotHp[m[K’ {aka ‘[01m[Kconst struct rm_msgs::GameRobotHp_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kblue_base_hp[m[K’
+  179 |                last_hp_msg_.blue_base_hp - msg.[01;31m[Kblue_base_hp[m[K > 190);
+      |                                                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee.cpp:[m[K In member function ‘[01m[Kint rm_referee::Referee::unpack(uint8_t*)[m[K’:
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee.cpp:559:23:[m[K [01;31m[Kerror: [m[K‘[01m[Krm_msgs::SentryInfo[m[K’ {aka ‘[01m[Kstruct rm_msgs::SentryInfo_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kis_out_of_war[m[K’
+  559 |           sentry_info.[01;31m[Kis_out_of_war[m[K = sentry_info_ref.is_out_of_war;
+      |                       [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee.cpp:559:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct rm_referee::SentryInfo[m[K’ has no member named ‘[01m[Kis_out_of_war[m[K’
+  559 |           sentry_info.is_out_of_war = sentry_info_ref.[01;31m[Kis_out_of_war[m[K;
+      |                                                       [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee.cpp:560:23:[m[K [01;31m[Kerror: [m[K‘[01m[Krm_msgs::SentryInfo[m[K’ {aka ‘[01m[Kstruct rm_msgs::SentryInfo_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kremaining_bullets_can_supply[m[K’
+  560 |           sentry_info.[01;31m[Kremaining_bullets_can_supply[m[K = sentry_info_ref.remaining_bullets_can_supply;
+      |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/rm_control/rm_referee/src/referee.cpp:560:70:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct rm_referee::SentryInfo[m[K’ has no member named ‘[01m[Kremaining_bullets_can_supply[m[K’
+  560 |           sentry_info.remaining_bullets_can_supply = sentry_info_ref.[01;31m[Kremaining_bullets_can_supply[m[K;
+      |                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/rm_referee.dir/build.make:128：CMakeFiles/rm_referee.dir/src/ui/interactive_data.cpp.o] 错误 1
+make[2]: *** 正在等待未完成的任务....
+make[2]: *** [CMakeFiles/rm_referee.dir/build.make:167：CMakeFiles/rm_referee.dir/src/ui/ui_base.cpp.o] 错误 1
+make[2]: *** [CMakeFiles/rm_referee.dir/build.make:154：CMakeFiles/rm_referee.dir/src/ui/trigger_change_ui.cpp.o] 错误 1
+make[2]: *** [CMakeFiles/rm_referee.dir/build.make:141：CMakeFiles/rm_referee.dir/src/ui/time_change_ui.cpp.o] 错误 1
+make[2]: *** [CMakeFiles/rm_referee.dir/build.make:102：CMakeFiles/rm_referee.dir/src/ui/flash_ui.cpp.o] 错误 1
+make[2]: *** [CMakeFiles/rm_referee.dir/build.make:63：CMakeFiles/rm_referee.dir/src/main.cpp.o] 错误 1
+make[2]: *** [CMakeFiles/rm_referee.dir/build.make:76：CMakeFiles/rm_referee.dir/src/referee.cpp.o] 错误 1
+make[2]: *** [CMakeFiles/rm_referee.dir/build.make:89：CMakeFiles/rm_referee.dir/src/referee_base.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:313：CMakeFiles/rm_referee.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

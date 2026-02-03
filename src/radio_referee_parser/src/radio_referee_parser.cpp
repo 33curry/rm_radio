@@ -103,11 +103,6 @@ void RadioRefereeParser::radioRefereeDataCallback(const rm_msgs::RadarRadioData:
   static std::vector<uint8_t> buffer;
   // 假设msg->data为原始字节流
   const uint8_t* raw = msg->data.data();
-  // 注意：这里读取的长度假设与旧代码一致，实际使用中需确保底层发上来的数据足够或正确
-  // 旧代码: sizeof(ally_1) * 7 + ... 可能只是为了凑一个足够大的buffer读取操作
-  // 建议: msg 如果是 GameRobotHp 类型，其实并不适合传输任意字节流。
-  // 但既然是沿用旧架构，假设底层把字节流塞进了这个结构体。
-  // 我们尽可能多读一些。
   size_t read_len = msg->data.size();
   buffer.insert(buffer.end(), raw, raw + read_len);
 
@@ -130,16 +125,20 @@ void RadioRefereeParser::radioRefereeDataCallback(const rm_msgs::RadarRadioData:
 
     // CRC8
     if (Get_CRC8_Check_Sum(&buffer[sof_index], 4) != buffer[sof_index + 4]) {
+      ROS_ERROR("CRC8 Failed! Calculated: %02x, Expected: %02x", 
+          Get_CRC8_Check_Sum(&buffer[sof_index], 4), buffer[sof_index + 4]);
       buffer.erase(buffer.begin(), buffer.begin() + sof_index + 1);
       continue;
     }
     // CRC16
     if (!Verify_CRC16_Check_Sum(&buffer[sof_index], total_len)) {
+      ROS_ERROR("CRC16 Failed!");
       buffer.erase(buffer.begin(), buffer.begin() + sof_index + 1);
       continue;
     }
 
     uint16_t cmd_id = buffer[sof_index + FRAME_HEADER_LEN] | (buffer[sof_index + FRAME_HEADER_LEN + 1] << 8);
+    ROS_INFO("Packet Valid! CmdID: 0x%04x", cmd_id);
     const uint8_t* payload = &buffer[sof_index + FRAME_HEADER_LEN + 2];
     uint16_t payload_len = data_length;
 

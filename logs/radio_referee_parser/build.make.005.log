@@ -1,8 +1,0 @@
-[35m[1mScanning dependencies of target radio_referee_parser_nodelet[0m
-[35m[1mScanning dependencies of target radio_referee_parser_node[0m
-[ 25%] [32mBuilding CXX object CMakeFiles/radio_referee_parser_node.dir/src/radio_referee_parser_node.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/radio_referee_parser_nodelet.dir/src/radio_referee_parser.cpp.o[0m
-[ 75%] [32m[1mLinking CXX executable /home/robot/radio_ws/devel/.private/radio_referee_parser/lib/radio_referee_parser/radio_referee_parser_node[0m
-[ 75%] Built target radio_referee_parser_node
-[100%] [32m[1mLinking CXX shared library /home/robot/radio_ws/devel/.private/radio_referee_parser/lib/libradio_referee_parser_nodelet.so[0m
-[100%] Built target radio_referee_parser_nodelet
