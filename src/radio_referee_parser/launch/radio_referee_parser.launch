@@ -1,8 +1,5 @@
 <launch>
 
-  <!--  机器人ID：雷达必须设为 9 (红方) 或 109 (蓝方) -->
-  <arg name="robot_id" default="9"/> 
-
   <!-- 启动Nodelet管理器 -->
   <node pkg="nodelet" type="nodelet" name="radio_referee_mgr" args="manager" output="screen"/>
 
@@ -10,20 +7,7 @@
   <node pkg="nodelet" type="nodelet" name="radio_referee_parser" 
         args="load radio_referee_parser/RadioRefereeParser radio_referee_mgr" output="screen">
     
+    <!-- 输入话题 -->
     <remap from="/radio/referee_data" to="/radio/raw_data"/>
-
-    <!-- 参数设置 -->
-    <param name="robot_id" value="$(arg robot_id)"/>
-    
-    <!-- 将雷达解析出的"红方所有血量"，映射到全局通用的 /referee/game_robot_hp 话题 -->
-    <!-- 这样场上其他机器人只要订阅 /referee/game_robot_hp 就能收到消息 -->
-    <remap from="/referee_parser/red/all_robot_hp" to="/referee/game_robot_hp" />
-    
-    <!-- 同样的，如果作为蓝方雷达 -->
-    <remap from="/referee_parser/blue/all_robot_hp" to="/referee/game_robot_hp" />
-
-    <!-- 位置话题映射 -->
-    <!-- <remap from="/referee_parser/red/all_robot_position" to="/radar/enemy_position" /> -->
-    
   </node>
 </launch>

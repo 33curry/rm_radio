@@ -72,11 +72,6 @@ bool Verify_CRC16_Check_Sum(const uint8_t* pchMessage, uint32_t dwLength) {
 
 void RadioRefereeParser::onInit()
 {
-  nh_ = getPrivateNodeHandle();
-
-  // Load robot_id from parameter server, default to 1
-  nh_.param<int>("robot_id", (int&)robot_id_, 1);
-
   // Subscribe to radio referee data
   radio_referee_sub_ = nh_.subscribe("/radio/referee_data", 10,
       &RadioRefereeParser::radioRefereeDataCallback, this);

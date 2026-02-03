@@ -62,9 +62,6 @@ private:
   // 0x0A05 对方增益
   ros::Publisher enemy_buff_pub_;
 
-  /* 数据缓存 */
-  uint16_t robot_id_ = 0;   // 本机ID
-
   /* 回调 & 解析 */
   void radioRefereeDataCallback(const rm_msgs::RadarRadioData::ConstPtr& msg);
   

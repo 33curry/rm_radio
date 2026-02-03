@@ -44,7 +44,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/EngineerAct
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/TargetDetectionArray.h, /home/robot/radio_ws/devel/include/rm_msgs/TargetDetectionArray.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/SentryCmd.h, /home/robot/radio_ws/devel/include/rm_msgs/SentryCmd.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/ContinousDetectorSwitchResponse.h, /home/robot/radio_ws/devel/include/rm_msgs/ContinousDetectorSwitchResponse.h)
-Symlinking /home/robot/radio_ws/devel/include/rm_msgs/RadarCmd.h
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarCmd.h, /home/robot/radio_ws/devel/include/rm_msgs/RadarCmd.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/SentryAttackingTarget.h, /home/robot/radio_ws/devel/include/rm_msgs/SentryAttackingTarget.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/StatusChangeRequest.h, /home/robot/radio_ws/devel/include/rm_msgs/StatusChangeRequest.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/GameRobotPosData.h, /home/robot/radio_ws/devel/include/rm_msgs/GameRobotPosData.h)
@@ -66,6 +66,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/StateCmd.h,
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/EnableImuTrigger.h, /home/robot/radio_ws/devel/include/rm_msgs/EnableImuTrigger.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/TargetDetection.h, /home/robot/radio_ws/devel/include/rm_msgs/TargetDetection.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/LegCmd.h, /home/robot/radio_ws/devel/include/rm_msgs/LegCmd.h)
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarRadioData.h, /home/robot/radio_ws/devel/include/rm_msgs/RadarRadioData.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/GimbalPosState.h, /home/robot/radio_ws/devel/include/rm_msgs/GimbalPosState.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/ContinousDetectorSwitch.h, /home/robot/radio_ws/devel/include/rm_msgs/ContinousDetectorSwitch.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/TofRadarData.h, /home/robot/radio_ws/devel/include/rm_msgs/TofRadarData.h)
@@ -78,9 +79,9 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/PriorityArr
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/GameRobotHp.h, /home/robot/radio_ws/devel/include/rm_msgs/GameRobotHp.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/LocalHeatState.h, /home/robot/radio_ws/devel/include/rm_msgs/LocalHeatState.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/ContinousDetectorSwitchRequest.h, /home/robot/radio_ws/devel/include/rm_msgs/ContinousDetectorSwitchRequest.h)
-Symlinking /home/robot/radio_ws/devel/include/rm_msgs/RadarRobotBuff.h
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarRobotBuff.h, /home/robot/radio_ws/devel/include/rm_msgs/RadarRobotBuff.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/PowerManagementProcessStackOverflowData.h, /home/robot/radio_ws/devel/include/rm_msgs/PowerManagementProcessStackOverflowData.h)
-Symlinking /home/robot/radio_ws/devel/include/rm_msgs/DartRemainingTime.h
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/DartRemainingTime.h, /home/robot/radio_ws/devel/include/rm_msgs/DartRemainingTime.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/SupplyProjectileAction.h, /home/robot/radio_ws/devel/include/rm_msgs/SupplyProjectileAction.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/BusState.h, /home/robot/radio_ws/devel/include/rm_msgs/BusState.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/CameraStatus.h, /home/robot/radio_ws/devel/include/rm_msgs/CameraStatus.h)
@@ -88,7 +89,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/ActuatorSta
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/MapSentryData.h, /home/robot/radio_ws/devel/include/rm_msgs/MapSentryData.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/CapacityData.h, /home/robot/radio_ws/devel/include/rm_msgs/CapacityData.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/EnableImuTriggerResponse.h, /home/robot/radio_ws/devel/include/rm_msgs/EnableImuTriggerResponse.h)
-Symlinking /home/robot/radio_ws/devel/include/rm_msgs/CurrentSentryPosData.h
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/CurrentSentryPosData.h, /home/robot/radio_ws/devel/include/rm_msgs/CurrentSentryPosData.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/TagMsg.h, /home/robot/radio_ws/devel/include/rm_msgs/TagMsg.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/DartClientCmd.h, /home/robot/radio_ws/devel/include/rm_msgs/DartClientCmd.h)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/SentryInfo.h, /home/robot/radio_ws/devel/include/rm_msgs/SentryInfo.h)
@@ -99,7 +100,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/CameraStatu
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/__init__.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/__init__.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_DartClientCmd.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_DartClientCmd.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_EngineerAction.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_EngineerAction.py)
-Symlinking /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_CurrentSentryPosData.py
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_CurrentSentryPosData.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_CurrentSentryPosData.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_PowerManagementUnknownExceptionData.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_PowerManagementUnknownExceptionData.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_EngineerActionResult.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_EngineerActionResult.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_GameRobotPosData.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_GameRobotPosData.py)
@@ -125,13 +126,14 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/r
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_GimbalPosState.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_GimbalPosState.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_CapacityData.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_CapacityData.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_EngineerActionFeedback.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_EngineerActionFeedback.py)
-Symlinking /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_DartRemainingTime.py
-Symlinking /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_RadarCmd.py
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_DartRemainingTime.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_DartRemainingTime.py)
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarCmd.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_RadarCmd.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarEnemyBulletAllowance.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_RadarEnemyBulletAllowance.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_VisualizeStateData.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_VisualizeStateData.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RfidStatus.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_RfidStatus.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/__init__.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/__init__.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_IcraBuffDebuffZoneStatus.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_IcraBuffDebuffZoneStatus.py)
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarRadioData.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_RadarRadioData.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_SentryCmd.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_SentryCmd.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarEnemyStatus.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_RadarEnemyStatus.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_BulletAllowance.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_BulletAllowance.py)
@@ -177,7 +179,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/r
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_ManualToReferee.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_ManualToReferee.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_PowerManagementInitializationExceptionData.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_PowerManagementInitializationExceptionData.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarToSentry.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_RadarToSentry.py)
-Symlinking /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_RadarRobotBuff.py
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarRobotBuff.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_RadarRobotBuff.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/srv/_EnableGyro.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/srv/_EnableGyro.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/srv/_CameraStatus.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/srv/_CameraStatus.py)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/srv/_ContinousDetectorSwitch.py, /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/srv/_ContinousDetectorSwitch.py)
@@ -230,7 +232,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_Buff.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_Buff.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/ShootCmd.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/ShootCmd.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_ClientMapSendData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_ClientMapSendData.lisp)
-Symlinking /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_DartRemainingTime.lisp
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_DartRemainingTime.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_DartRemainingTime.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/GimbalPosState.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/GimbalPosState.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/GameStatus.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/GameStatus.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/LegCmd.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/LegCmd.lisp)
@@ -243,6 +245,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_LocalHeatState.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_LocalHeatState.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RfidStatus.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RfidStatus.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarEnemyHp.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RadarEnemyHp.lisp)
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarRadioData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RadarRadioData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_ManualToReferee.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_ManualToReferee.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/KalmanData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/KalmanData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_EngineerResult.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_EngineerResult.lisp)
@@ -255,7 +258,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/PowerManagementSystemExceptionData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/PowerManagementSystemExceptionData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/EngineerGoal.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/EngineerGoal.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_TagMsgArray.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_TagMsgArray.lisp)
-Symlinking /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/DartRemainingTime.lisp
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/DartRemainingTime.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/DartRemainingTime.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/ShootData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/ShootData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_ChassisCmd.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_ChassisCmd.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/TagMsgArray.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/TagMsgArray.lisp)
@@ -269,10 +272,10 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RobotsPositionData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RobotsPositionData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_PriorityArray.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_PriorityArray.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_GameRobotHp.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_GameRobotHp.lisp)
-Symlinking /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RadarCmd.lisp
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarCmd.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RadarCmd.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RobotHurt.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RobotHurt.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/EngineerActionGoal.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/EngineerActionGoal.lisp)
-Symlinking /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_CurrentSentryPosData.lisp
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_CurrentSentryPosData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_CurrentSentryPosData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/DartStatus.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/DartStatus.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/PowerManagementUnknownExceptionData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/PowerManagementUnknownExceptionData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RadarInfo.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarInfo.lisp)
@@ -284,7 +287,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_ActuatorState.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_ActuatorState.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/GimbalDesError.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/GimbalDesError.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_ShootCmd.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_ShootCmd.lisp)
-Symlinking /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RadarRobotBuff.lisp
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarRobotBuff.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RadarRobotBuff.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RadarData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/CapacityData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/CapacityData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_ClientMapReceiveData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_ClientMapReceiveData.lisp)
@@ -308,7 +311,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/ClientMapReceiveData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/ClientMapReceiveData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/rm_msgs-msg.asd, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/rm_msgs-msg.asd)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_BulletAllowance.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_BulletAllowance.lisp)
-Symlinking /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/CurrentSentryPosData.lisp
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/CurrentSentryPosData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/CurrentSentryPosData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/ExchangerMsg.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/ExchangerMsg.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RadarEnemyBuff.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarEnemyBuff.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_TargetDetectionArray.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_TargetDetectionArray.lisp)
@@ -319,15 +322,16 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_KalmanData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_KalmanData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/EngineerActionResult.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/EngineerActionResult.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/ShootState.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/ShootState.lisp)
-Symlinking /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarCmd.lisp
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RadarCmd.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarCmd.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarInfo.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RadarInfo.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RadarData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/LocalHeatState.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/LocalHeatState.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/ChassisCmd.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/ChassisCmd.lisp)
-Symlinking /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarRobotBuff.lisp
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RadarRobotBuff.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarRobotBuff.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_ShootData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_ShootData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_PowerManagementUnknownExceptionData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_PowerManagementUnknownExceptionData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RadarEnemyHp.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarEnemyHp.lisp)
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RadarRadioData.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarRadioData.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_ExchangerMsg.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_ExchangerMsg.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_TargetDetection.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_TargetDetection.lisp)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/TargetDetectionArray.lisp, /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/TargetDetectionArray.lisp)
@@ -393,7 +397,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/_index.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/_index.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/GpioData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/GpioData.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarEnemyStatus.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarEnemyStatus.js)
-Symlinking /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/CurrentSentryPosData.js
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/CurrentSentryPosData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/CurrentSentryPosData.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/BusState.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/BusState.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/MapSentryData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/MapSentryData.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarToSentry.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarToSentry.js)
@@ -401,17 +405,18 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/ExchangerMsg.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/ExchangerMsg.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/DartInfo.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/DartInfo.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RobotsPositionData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RobotsPositionData.js)
-Symlinking /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarRobotBuff.js
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarRobotBuff.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarRobotBuff.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RobotHurt.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RobotHurt.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/EngineerActionGoal.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/EngineerActionGoal.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/GimbalDesError.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/GimbalDesError.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarMarkData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarMarkData.js)
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarRadioData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarRadioData.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/KalmanData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/KalmanData.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/ShootBeforehandCmd.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/ShootBeforehandCmd.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarData.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/SentryCmd.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/SentryCmd.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/PowerManagementSystemExceptionData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/PowerManagementSystemExceptionData.js)
-Symlinking /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/DartRemainingTime.js
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/DartRemainingTime.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/DartRemainingTime.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarInfo.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarInfo.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/PriorityArray.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/PriorityArray.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/LpData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/LpData.js)
@@ -432,7 +437,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/EngineerActionFeedback.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/EngineerActionFeedback.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/LocalHeatState.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/LocalHeatState.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/EventData.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/EventData.js)
-Symlinking /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarCmd.js
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarCmd.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarCmd.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/BulletAllowance.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/BulletAllowance.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/MultiDofCmd.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/MultiDofCmd.js)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/GimbalCmd.js, /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/GimbalCmd.js)
@@ -484,7 +489,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RfidStatus.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/RfidStatus.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/SentryCmd.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/SentryCmd.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/EngineerGoal.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/EngineerGoal.l)
-Symlinking /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/DartRemainingTime.l
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/DartRemainingTime.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/DartRemainingTime.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/VisualizeStateData.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/VisualizeStateData.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/GameRobotStatus.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/GameRobotStatus.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/SentryAttackingTarget.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/SentryAttackingTarget.l)
@@ -505,6 +510,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/ShootBeforehandCmd.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/ShootBeforehandCmd.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/GameRobotPosData.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/GameRobotPosData.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/TagMsg.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/TagMsg.l)
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RadarRadioData.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/RadarRadioData.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/MovingAverageData.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/MovingAverageData.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/EngineerFeedback.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/EngineerFeedback.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/LocalHeatState.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/LocalHeatState.l)
@@ -516,8 +522,8 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/ClientMapReceiveData.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/ClientMapReceiveData.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/GimbalCmd.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/GimbalCmd.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/Buff.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/Buff.l)
-Symlinking /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/RadarCmd.l
-Symlinking /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/RadarRobotBuff.l
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RadarCmd.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/RadarCmd.l)
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RadarRobotBuff.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/RadarRobotBuff.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/PowerManagementSystemExceptionData.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/PowerManagementSystemExceptionData.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/TofRadarData.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/TofRadarData.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/TargetDetectionArray.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/TargetDetectionArray.l)
@@ -539,7 +545,7 @@ Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/ms
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RobotHurt.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/RobotHurt.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/EngineerResult.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/EngineerResult.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/CapacityData.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/CapacityData.l)
-Symlinking /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/CurrentSentryPosData.l
+Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/CurrentSentryPosData.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/CurrentSentryPosData.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/ChassisCmd.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/ChassisCmd.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/PriorityArray.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/PriorityArray.l)
 Linked: (/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/ManualToReferee.l, /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/ManualToReferee.l)
