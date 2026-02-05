@@ -47,6 +47,11 @@
     :initarg :enemy_outpost
     :type cl:boolean
     :initform cl:nil)
+   (enemy_base_buff
+    :reader enemy_base_buff
+    :initarg :enemy_base_buff
+    :type cl:boolean
+    :initform cl:nil)
    (enemy_flying_slope_pre
     :reader enemy_flying_slope_pre
     :initarg :enemy_flying_slope_pre
@@ -132,6 +137,11 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rm_msgs-msg:enemy_outpost-val is deprecated.  Use rm_msgs-msg:enemy_outpost instead.")
   (enemy_outpost m))
 
+(cl:ensure-generic-function 'enemy_base_buff-val :lambda-list '(m))
+(cl:defmethod enemy_base_buff-val ((m <RadarEnemyStatus>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rm_msgs-msg:enemy_base_buff-val is deprecated.  Use rm_msgs-msg:enemy_base_buff instead.")
+  (enemy_base_buff m))
+
 (cl:ensure-generic-function 'enemy_flying_slope_pre-val :lambda-list '(m))
 (cl:defmethod enemy_flying_slope_pre-val ((m <RadarEnemyStatus>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader rm_msgs-msg:enemy_flying_slope_pre-val is deprecated.  Use rm_msgs-msg:enemy_flying_slope_pre instead.")
@@ -181,6 +191,7 @@
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'enemy_trapezoidal_highland) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'enemy_fort) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'enemy_outpost) 1 0)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'enemy_base_buff) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'enemy_flying_slope_pre) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'enemy_flying_slope_post) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'enemy_highway_tunnel_l) 1 0)) ostream)
@@ -204,6 +215,7 @@
     (cl:setf (cl:slot-value msg 'enemy_trapezoidal_highland) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'enemy_fort) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'enemy_outpost) (cl:not (cl:zerop (cl:read-byte istream))))
+    (cl:setf (cl:slot-value msg 'enemy_base_buff) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'enemy_flying_slope_pre) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'enemy_flying_slope_post) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'enemy_highway_tunnel_l) (cl:not (cl:zerop (cl:read-byte istream))))
@@ -221,21 +233,22 @@
   "rm_msgs/RadarEnemyStatus")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<RadarEnemyStatus>)))
   "Returns md5sum for a message object of type '<RadarEnemyStatus>"
-  "51afc1aaa64cc6b69b332c25df8411d0")
+  "392f33a234e14207b0df7f118c14e256")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'RadarEnemyStatus)))
   "Returns md5sum for a message object of type 'RadarEnemyStatus"
-  "51afc1aaa64cc6b69b332c25df8411d0")
+  "392f33a234e14207b0df7f118c14e256")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<RadarEnemyStatus>)))
   "Returns full string definition for message of type '<RadarEnemyStatus>"
-  (cl:format cl:nil "uint16 remainder_coin~%uint16 total_coin~%uint32 status_bitmask~%~%# Bit interpretation (True if occupied by enemy/active for enemy)~%# Bit 0~%bool enemy_assembly~%# Bit 1-2~%bool enemy_ring_highland~%# Bit 3~%bool enemy_trapezoidal_highland~%# Bit 4-5~%bool enemy_fort~%# Bit 6-7~%bool enemy_outpost~%# Bit 9 (Flying Slope Pre)~%bool enemy_flying_slope_pre~%# Bit 10 (Flying Slope Post)~%bool enemy_flying_slope_post~%# Bit 11 (Highway/Tunnel L?)~%bool enemy_highway_tunnel_l~%# Bit 12 (Highway/Tunnel H?)~%bool enemy_highway_tunnel_h~%# Bit 13 (Highland High)~%bool enemy_central_high~%# Bit 14 (Highland Fly?)~%bool enemy_central_low~%# Bit 15 (Highland Road)~%bool enemy_highway_high~%~%~%"))
+  (cl:format cl:nil "uint16 remainder_coin~%uint16 total_coin~%uint32 status_bitmask~%~%# Bit interpretation (True if occupied by enemy/active for enemy)~%# Bit 0~%bool enemy_assembly~%# Bit 1-2~%bool enemy_ring_highland~%# Bit 3~%bool enemy_trapezoidal_highland~%# Bit 4-5~%bool enemy_fort~%# Bit 6-7~%bool enemy_outpost~%# Bit 8 (Base Buff Point)~%bool enemy_base_buff~%# Bit 9 (Flying Slope Pre)~%bool enemy_flying_slope_pre~%# Bit 10 (Flying Slope Post)~%bool enemy_flying_slope_post~%# Bit 11 (Highway/Tunnel L?)~%bool enemy_highway_tunnel_l~%# Bit 12 (Highway/Tunnel H?)~%bool enemy_highway_tunnel_h~%# Bit 13 (Highland High)~%bool enemy_central_high~%# Bit 14 (Highland Fly?)~%bool enemy_central_low~%# Bit 15 (Highland Road)~%bool enemy_highway_high~%~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'RadarEnemyStatus)))
   "Returns full string definition for message of type 'RadarEnemyStatus"
-  (cl:format cl:nil "uint16 remainder_coin~%uint16 total_coin~%uint32 status_bitmask~%~%# Bit interpretation (True if occupied by enemy/active for enemy)~%# Bit 0~%bool enemy_assembly~%# Bit 1-2~%bool enemy_ring_highland~%# Bit 3~%bool enemy_trapezoidal_highland~%# Bit 4-5~%bool enemy_fort~%# Bit 6-7~%bool enemy_outpost~%# Bit 9 (Flying Slope Pre)~%bool enemy_flying_slope_pre~%# Bit 10 (Flying Slope Post)~%bool enemy_flying_slope_post~%# Bit 11 (Highway/Tunnel L?)~%bool enemy_highway_tunnel_l~%# Bit 12 (Highway/Tunnel H?)~%bool enemy_highway_tunnel_h~%# Bit 13 (Highland High)~%bool enemy_central_high~%# Bit 14 (Highland Fly?)~%bool enemy_central_low~%# Bit 15 (Highland Road)~%bool enemy_highway_high~%~%~%"))
+  (cl:format cl:nil "uint16 remainder_coin~%uint16 total_coin~%uint32 status_bitmask~%~%# Bit interpretation (True if occupied by enemy/active for enemy)~%# Bit 0~%bool enemy_assembly~%# Bit 1-2~%bool enemy_ring_highland~%# Bit 3~%bool enemy_trapezoidal_highland~%# Bit 4-5~%bool enemy_fort~%# Bit 6-7~%bool enemy_outpost~%# Bit 8 (Base Buff Point)~%bool enemy_base_buff~%# Bit 9 (Flying Slope Pre)~%bool enemy_flying_slope_pre~%# Bit 10 (Flying Slope Post)~%bool enemy_flying_slope_post~%# Bit 11 (Highway/Tunnel L?)~%bool enemy_highway_tunnel_l~%# Bit 12 (Highway/Tunnel H?)~%bool enemy_highway_tunnel_h~%# Bit 13 (Highland High)~%bool enemy_central_high~%# Bit 14 (Highland Fly?)~%bool enemy_central_low~%# Bit 15 (Highland Road)~%bool enemy_highway_high~%~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <RadarEnemyStatus>))
   (cl:+ 0
      2
      2
      4
+     1
      1
      1
      1
@@ -260,6 +273,7 @@
     (cl:cons ':enemy_trapezoidal_highland (enemy_trapezoidal_highland msg))
     (cl:cons ':enemy_fort (enemy_fort msg))
     (cl:cons ':enemy_outpost (enemy_outpost msg))
+    (cl:cons ':enemy_base_buff (enemy_base_buff msg))
     (cl:cons ':enemy_flying_slope_pre (enemy_flying_slope_pre msg))
     (cl:cons ':enemy_flying_slope_post (enemy_flying_slope_post msg))
     (cl:cons ':enemy_highway_tunnel_l (enemy_highway_tunnel_l msg))

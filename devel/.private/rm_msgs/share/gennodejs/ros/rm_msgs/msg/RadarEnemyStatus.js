@@ -26,6 +26,7 @@ class RadarEnemyStatus {
       this.enemy_trapezoidal_highland = null;
       this.enemy_fort = null;
       this.enemy_outpost = null;
+      this.enemy_base_buff = null;
       this.enemy_flying_slope_pre = null;
       this.enemy_flying_slope_post = null;
       this.enemy_highway_tunnel_l = null;
@@ -82,6 +83,12 @@ class RadarEnemyStatus {
       }
       else {
         this.enemy_outpost = false;
+      }
+      if (initObj.hasOwnProperty('enemy_base_buff')) {
+        this.enemy_base_buff = initObj.enemy_base_buff
+      }
+      else {
+        this.enemy_base_buff = false;
       }
       if (initObj.hasOwnProperty('enemy_flying_slope_pre')) {
         this.enemy_flying_slope_pre = initObj.enemy_flying_slope_pre
@@ -146,6 +153,8 @@ class RadarEnemyStatus {
     bufferOffset = _serializer.bool(obj.enemy_fort, buffer, bufferOffset);
     // Serialize message field [enemy_outpost]
     bufferOffset = _serializer.bool(obj.enemy_outpost, buffer, bufferOffset);
+    // Serialize message field [enemy_base_buff]
+    bufferOffset = _serializer.bool(obj.enemy_base_buff, buffer, bufferOffset);
     // Serialize message field [enemy_flying_slope_pre]
     bufferOffset = _serializer.bool(obj.enemy_flying_slope_pre, buffer, bufferOffset);
     // Serialize message field [enemy_flying_slope_post]
@@ -183,6 +192,8 @@ class RadarEnemyStatus {
     data.enemy_fort = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [enemy_outpost]
     data.enemy_outpost = _deserializer.bool(buffer, bufferOffset);
+    // Deserialize message field [enemy_base_buff]
+    data.enemy_base_buff = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [enemy_flying_slope_pre]
     data.enemy_flying_slope_pre = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [enemy_flying_slope_post]
@@ -201,7 +212,7 @@ class RadarEnemyStatus {
   }
 
   static getMessageSize(object) {
-    return 20;
+    return 21;
   }
 
   static datatype() {
@@ -211,7 +222,7 @@ class RadarEnemyStatus {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '51afc1aaa64cc6b69b332c25df8411d0';
+    return '392f33a234e14207b0df7f118c14e256';
   }
 
   static messageDefinition() {
@@ -232,6 +243,8 @@ class RadarEnemyStatus {
     bool enemy_fort
     # Bit 6-7
     bool enemy_outpost
+    # Bit 8 (Base Buff Point)
+    bool enemy_base_buff
     # Bit 9 (Flying Slope Pre)
     bool enemy_flying_slope_pre
     # Bit 10 (Flying Slope Post)
@@ -246,6 +259,8 @@ class RadarEnemyStatus {
     bool enemy_central_low
     # Bit 15 (Highland Road)
     bool enemy_highway_high
+    
+    
     
     `;
   }
@@ -310,6 +325,13 @@ class RadarEnemyStatus {
     }
     else {
       resolved.enemy_outpost = false
+    }
+
+    if (msg.enemy_base_buff !== undefined) {
+      resolved.enemy_base_buff = msg.enemy_base_buff;
+    }
+    else {
+      resolved.enemy_base_buff = false
     }
 
     if (msg.enemy_flying_slope_pre !== undefined) {

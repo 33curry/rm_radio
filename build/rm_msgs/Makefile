@@ -350,19 +350,6 @@ rosgraph_msgs_generate_messages_lisp/fast:
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named _rm_msgs_generate_messages_check_deps_GameRobotPosData
-
-# Build rule for target.
-_rm_msgs_generate_messages_check_deps_GameRobotPosData: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_GameRobotPosData
-.PHONY : _rm_msgs_generate_messages_check_deps_GameRobotPosData
-
-# fast build rule for target.
-_rm_msgs_generate_messages_check_deps_GameRobotPosData/fast:
-	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_GameRobotPosData.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_GameRobotPosData.dir/build
-.PHONY : _rm_msgs_generate_messages_check_deps_GameRobotPosData/fast
-
-#=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_PowerManagementSystemExceptionData
 
 # Build rule for target.
@@ -556,6 +543,32 @@ std_msgs_generate_messages_py: cmake_check_build_system
 std_msgs_generate_messages_py/fast:
 	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_GameRobotPosData
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_GameRobotPosData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_GameRobotPosData
+.PHONY : _rm_msgs_generate_messages_check_deps_GameRobotPosData
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_GameRobotPosData/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_GameRobotPosData.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_GameRobotPosData.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_GameRobotPosData/fast
+
+#=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_RadarDoubleKey
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarDoubleKey: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_RadarDoubleKey
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarDoubleKey
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_RadarDoubleKey/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarDoubleKey.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarDoubleKey.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_RadarDoubleKey/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
@@ -1286,6 +1299,32 @@ _rm_msgs_generate_messages_check_deps_GameRobotStatus/fast:
 .PHONY : _rm_msgs_generate_messages_check_deps_GameRobotStatus/fast
 
 #=============================================================================
+# Target rules for targets named rm_msgs_generate_messages_eus
+
+# Build rule for target.
+rm_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_generate_messages_eus
+.PHONY : rm_msgs_generate_messages_eus
+
+# fast build rule for target.
+rm_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/rm_msgs_generate_messages_eus.dir/build.make CMakeFiles/rm_msgs_generate_messages_eus.dir/build
+.PHONY : rm_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _rm_msgs_generate_messages_check_deps_EngineerResult
+
+# Build rule for target.
+_rm_msgs_generate_messages_check_deps_EngineerResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_EngineerResult
+.PHONY : _rm_msgs_generate_messages_check_deps_EngineerResult
+
+# fast build rule for target.
+_rm_msgs_generate_messages_check_deps_EngineerResult/fast:
+	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_EngineerResult.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_EngineerResult.dir/build
+.PHONY : _rm_msgs_generate_messages_check_deps_EngineerResult/fast
+
+#=============================================================================
 # Target rules for targets named _rm_msgs_generate_messages_check_deps_EngineerUi
 
 # Build rule for target.
@@ -1871,32 +1910,6 @@ rm_msgs_generate_messages_cpp/fast:
 .PHONY : rm_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named _rm_msgs_generate_messages_check_deps_EngineerResult
-
-# Build rule for target.
-_rm_msgs_generate_messages_check_deps_EngineerResult: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _rm_msgs_generate_messages_check_deps_EngineerResult
-.PHONY : _rm_msgs_generate_messages_check_deps_EngineerResult
-
-# fast build rule for target.
-_rm_msgs_generate_messages_check_deps_EngineerResult/fast:
-	$(MAKE) -f CMakeFiles/_rm_msgs_generate_messages_check_deps_EngineerResult.dir/build.make CMakeFiles/_rm_msgs_generate_messages_check_deps_EngineerResult.dir/build
-.PHONY : _rm_msgs_generate_messages_check_deps_EngineerResult/fast
-
-#=============================================================================
-# Target rules for targets named rm_msgs_generate_messages_eus
-
-# Build rule for target.
-rm_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rm_msgs_generate_messages_eus
-.PHONY : rm_msgs_generate_messages_eus
-
-# fast build rule for target.
-rm_msgs_generate_messages_eus/fast:
-	$(MAKE) -f CMakeFiles/rm_msgs_generate_messages_eus.dir/build.make CMakeFiles/rm_msgs_generate_messages_eus.dir/build
-.PHONY : rm_msgs_generate_messages_eus/fast
-
-#=============================================================================
 # Target rules for targets named rm_msgs_gencpp
 
 # Build rule for target.
@@ -1988,7 +2001,6 @@ help:
 	@echo "... _rm_msgs_generate_messages_check_deps_BalanceState"
 	@echo "... _rm_msgs_generate_messages_check_deps_ShootCmd"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... _rm_msgs_generate_messages_check_deps_GameRobotPosData"
 	@echo "... _rm_msgs_generate_messages_check_deps_PowerManagementSystemExceptionData"
 	@echo "... _rm_msgs_generate_messages_check_deps_ActuatorState"
 	@echo "... std_msgs_generate_messages_cpp"
@@ -2004,6 +2016,8 @@ help:
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... _rm_msgs_generate_messages_check_deps_DartRemainingTime"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... _rm_msgs_generate_messages_check_deps_GameRobotPosData"
+	@echo "... _rm_msgs_generate_messages_check_deps_RadarDoubleKey"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... _rm_msgs_generate_messages_check_deps_GameRobotHp"
 	@echo "... actionlib_generate_messages_lisp"
@@ -2060,6 +2074,8 @@ help:
 	@echo "... _rm_msgs_generate_messages_check_deps_SupplyProjectileAction"
 	@echo "... run_tests"
 	@echo "... _rm_msgs_generate_messages_check_deps_GameRobotStatus"
+	@echo "... rm_msgs_generate_messages_eus"
+	@echo "... _rm_msgs_generate_messages_check_deps_EngineerResult"
 	@echo "... _rm_msgs_generate_messages_check_deps_EngineerUi"
 	@echo "... _rm_msgs_generate_messages_check_deps_PowerManagementSampleAndStatusData"
 	@echo "... _rm_msgs_generate_messages_check_deps_PowerHeatData"
@@ -2105,8 +2121,6 @@ help:
 	@echo "... _rm_msgs_generate_messages_check_deps_ContinousDetectorSwitch"
 	@echo "... _rm_msgs_generate_messages_check_deps_StatusChange"
 	@echo "... rm_msgs_generate_messages_cpp"
-	@echo "... _rm_msgs_generate_messages_check_deps_EngineerResult"
-	@echo "... rm_msgs_generate_messages_eus"
 	@echo "... rm_msgs_gencpp"
 	@echo "... gmock_main"
 	@echo "... gmock"

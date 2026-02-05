@@ -39,6 +39,7 @@ rm_control/rm_msgs
 /home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarInfo.h /home/robot/radio_ws/devel/include/rm_msgs/RadarInfo.h
 /home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/ShootCmd.h /home/robot/radio_ws/devel/include/rm_msgs/ShootCmd.h
 /home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/SetLimitVelRequest.h /home/robot/radio_ws/devel/include/rm_msgs/SetLimitVelRequest.h
+/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarDoubleKey.h /home/robot/radio_ws/devel/include/rm_msgs/RadarDoubleKey.h
 /home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/DartStatus.h /home/robot/radio_ws/devel/include/rm_msgs/DartStatus.h
 /home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/EnableGyroRequest.h /home/robot/radio_ws/devel/include/rm_msgs/EnableGyroRequest.h
 /home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/EngineerActionResult.h /home/robot/radio_ws/devel/include/rm_msgs/EngineerActionResult.h
@@ -124,6 +125,7 @@ rm_control/rm_msgs
 /home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_GameStatus.py /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_GameStatus.py
 /home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_EngineerActionGoal.py /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_EngineerActionGoal.py
 /home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_DartStatus.py /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_DartStatus.py
+/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarDoubleKey.py /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_RadarDoubleKey.py
 /home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_GimbalPosState.py /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_GimbalPosState.py
 /home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_CapacityData.py /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_CapacityData.py
 /home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_EngineerActionFeedback.py /home/robot/radio_ws/devel/lib/python3/dist-packages/rm_msgs/msg/_EngineerActionFeedback.py
@@ -279,6 +281,7 @@ rm_control/rm_msgs
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_CurrentSentryPosData.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_CurrentSentryPosData.lisp
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/DartStatus.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/DartStatus.lisp
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/PowerManagementUnknownExceptionData.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/PowerManagementUnknownExceptionData.lisp
+/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RadarDoubleKey.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarDoubleKey.lisp
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RadarInfo.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarInfo.lisp
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/LpData.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/LpData.lisp
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_RadarEnemyStatus.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_RadarEnemyStatus.lisp
@@ -310,6 +313,7 @@ rm_control/rm_msgs
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_EngineerGoal.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_EngineerGoal.lisp
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/BulletAllowance.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/BulletAllowance.lisp
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/ClientMapReceiveData.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/ClientMapReceiveData.lisp
+/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarDoubleKey.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/RadarDoubleKey.lisp
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/rm_msgs-msg.asd /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/rm_msgs-msg.asd
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/_package_BulletAllowance.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/_package_BulletAllowance.lisp
 /home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/CurrentSentryPosData.lisp /home/robot/radio_ws/devel/share/common-lisp/ros/rm_msgs/msg/CurrentSentryPosData.lisp
@@ -374,6 +378,7 @@ rm_control/rm_msgs
 /home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/EngineerActionResult.js /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/EngineerActionResult.js
 /home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/EngineerFeedback.js /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/EngineerFeedback.js
 /home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/PowerManagementSampleAndStatusData.js /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/PowerManagementSampleAndStatusData.js
+/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarDoubleKey.js /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/RadarDoubleKey.js
 /home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/DartClientCmd.js /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/DartClientCmd.js
 /home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/ClientMapSendData.js /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/ClientMapSendData.js
 /home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/GameRobotStatus.js /home/robot/radio_ws/devel/share/gennodejs/ros/rm_msgs/msg/GameRobotStatus.js
@@ -548,6 +553,7 @@ rm_control/rm_msgs
 /home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/CapacityData.l /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/CapacityData.l
 /home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/CurrentSentryPosData.l /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/CurrentSentryPosData.l
 /home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/ChassisCmd.l /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/ChassisCmd.l
+/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RadarDoubleKey.l /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/RadarDoubleKey.l
 /home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/PriorityArray.l /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/PriorityArray.l
 /home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/ManualToReferee.l /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/msg/ManualToReferee.l
 /home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/srv/StatusChange.l /home/robot/radio_ws/devel/share/roseus/ros/rm_msgs/srv/StatusChange.l

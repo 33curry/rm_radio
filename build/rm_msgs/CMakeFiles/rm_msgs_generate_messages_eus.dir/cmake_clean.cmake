@@ -51,6 +51,7 @@ file(REMOVE_RECURSE
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/PriorityArray.l"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RadarCmd.l"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RadarData.l"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RadarDoubleKey.l"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RadarEnemyBuff.l"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RadarEnemyBulletAllowance.l"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/roseus/ros/rm_msgs/msg/RadarEnemyHp.l"

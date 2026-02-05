@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarDoubleKey.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarEnemyBuff.h
 string
 -
@@ -147,9 +163,17 @@ rm_msgs/RadarEnemyBulletAllowance.h
 -
 rm_msgs/RadarEnemyBuff.h
 -
+rm_msgs/RadarDoubleKey.h
+-
 cstdint
 -
 nodelet/nodelet.h
+-
+serial/serial.h
+-
+thread
+-
+vector
 -
 
 /home/robot/radio_ws/src/radio_referee_parser/src/radio_referee_parser.cpp
@@ -927,6 +951,32 @@ ros/forwards.h
 /opt/ros/noetic/include/ros/ros/forwards.h
 
 /opt/ros/noetic/include/rosconsole/macros_generated.h
+
+/opt/ros/noetic/include/serial/serial.h
+limits
+-
+vector
+-
+string
+-
+cstring
+-
+sstream
+-
+exception
+-
+stdexcept
+-
+serial/v8stdint.h
+-
+
+/opt/ros/noetic/include/serial/v8stdint.h
+stddef.h
+-
+stdio.h
+-
+stdint.h
+-
 
 /opt/ros/noetic/include/std_msgs/Bool.h
 string

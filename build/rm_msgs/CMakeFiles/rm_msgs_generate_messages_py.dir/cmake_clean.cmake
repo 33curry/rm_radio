@@ -50,6 +50,7 @@ file(REMOVE_RECURSE
   "/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_PriorityArray.py"
   "/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarCmd.py"
   "/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarData.py"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarDoubleKey.py"
   "/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarEnemyBuff.py"
   "/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarEnemyBulletAllowance.py"
   "/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages/rm_msgs/msg/_RadarEnemyHp.py"

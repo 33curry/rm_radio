@@ -8,9 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/robot/radio_ws/devel/.private/rm_msgs:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/robot/radio_ws/devel/.private/rm_msgs/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/robot/radio_ws/devel/.private/rm_msgs/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/robot/radio_ws/build/rm_msgs'
-export PYTHONPATH="/home/robot/radio_ws/devel/.private/rm_msgs/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/robot/radio_ws/src/rm_control/rm_msgs:$ROS_PACKAGE_PATH"

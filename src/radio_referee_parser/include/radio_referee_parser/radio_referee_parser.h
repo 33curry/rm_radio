@@ -9,6 +9,7 @@
 #include <rm_msgs/RadarEnemyStatus.h>
 #include <rm_msgs/RadarEnemyBulletAllowance.h>
 #include <rm_msgs/RadarEnemyBuff.h>
+#include <rm_msgs/RadarDoubleKey.h>
 #include <cstdint>
 #include <nodelet/nodelet.h>
 #include <serial/serial.h>
@@ -38,6 +39,7 @@ enum class MsgType : uint16_t
   ENEMY_BULLET_ALLOWANCE= 0x0A03,
   ENEMY_STATUS          = 0x0A04,
   ENEMY_BUFF            = 0x0A05,
+  DOUBLE_KEY            = 0x0A06,
 };
 
 class RadioRefereeParser : public nodelet::Nodelet
@@ -70,6 +72,9 @@ private:
   // 0x0A05 对方增益
   ros::Publisher enemy_buff_pub_;
 
+  // 0x0A06 密钥
+  ros::Publisher double_key_pub_;
+
   /* 回调 & 解析 */
   void radioRefereeDataCallback(const rm_msgs::RadarRadioData::ConstPtr& msg);
   
@@ -79,6 +84,7 @@ private:
   void parseEnemyBulletAllowance(const uint8_t* data, uint16_t len);
   void parseEnemyStatus(const uint8_t* data, uint16_t len);
   void parseEnemyBuff(const uint8_t* data, uint16_t len);
+  void parseDoubleKey(const uint8_t* data, uint16_t len);
 };
 
 }  // namespace radio_referee_parser

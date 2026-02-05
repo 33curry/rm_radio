@@ -1,0 +1,28 @@
+[35m[1mScanning dependencies of target radio_referee_parser_nodelet[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/radio_referee_parser_nodelet.dir/src/radio_referee_parser.cpp.o[0m
+[01m[K/home/robot/radio_ws/src/radio_referee_parser/src/radio_referee_parser.cpp:[m[K In member function ‘[01m[Kvoid radio_referee_parser::RadioRefereeParser::serialThreadLoop()[m[K’:
+[01m[K/home/robot/radio_ws/src/radio_referee_parser/src/radio_referee_parser.cpp:222:35:[m[K [01;31m[Kerror: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<unsigned char>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;31m[K-Werror=sign-compare[m[K]
+  222 |             if ([01;31m[Kpacket_buf.size() == 5 + 2 + data_len[m[K) {
+      |                 [01;31m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/radio_referee_parser/src/radio_referee_parser.cpp:[m[K In member function ‘[01m[Kvoid radio_referee_parser::RadioRefereeParser::parseEnemyStatus(const uint8_t*, uint16_t)[m[K’:
+[01m[K/home/robot/radio_ws/src/radio_referee_parser/src/radio_referee_parser.cpp:450:7:[m[K [01;31m[Kerror: [m[K‘[01m[Krm_msgs::RadarEnemyStatus[m[K’ {aka ‘[01m[Kstruct rm_msgs::RadarEnemyStatus_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kenemy_base_buff[m[K’
+  450 |   msg.[01;31m[Kenemy_base_buff[m[K = ((bits >> 8) & 0x01);
+      |       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/robot/radio_ws/src/radio_referee_parser/src/radio_referee_parser.cpp:[m[K In member function ‘[01m[Kvoid radio_referee_parser::RadioRefereeParser::parseDoubleKey(const uint8_t*, uint16_t)[m[K’:
+[01m[K/home/robot/radio_ws/src/radio_referee_parser/src/radio_referee_parser.cpp:527:32:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kboost::array<signed char, 6>::assign(const uint8_t*&, const uint8_t*)[m[K’
+  527 |   msg.key.assign(data, data + 6[01;31m[K)[m[K;
+      |                                [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/message.h:38[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/publisher.h:33[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/node_handle.h:32[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/robot/radio_ws/src/radio_referee_parser/include/radio_referee_parser/radio_referee_parser.h:3[m[K,
+                 from [01m[K/home/robot/radio_ws/src/radio_referee_parser/src/radio_referee_parser.cpp:1[m[K:
+[01m[K/usr/include/boost/array.hpp:178:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid boost::array<T, N>::assign(const T&) [with T = signed char; long unsigned int N = 6][m[K’
+  178 |         void [01;36m[Kassign[m[K (const T& value) { fill ( value ); }    // A synonym for fill
+      |              [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/boost/array.hpp:178:14:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+cc1plus: all warnings being treated as errors
+make[2]: *** [CMakeFiles/radio_referee_parser_nodelet.dir/build.make:63：CMakeFiles/radio_referee_parser_nodelet.dir/src/radio_referee_parser.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:563：CMakeFiles/radio_referee_parser_nodelet.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

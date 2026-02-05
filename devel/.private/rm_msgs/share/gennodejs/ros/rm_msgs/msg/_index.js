@@ -72,6 +72,7 @@ let RadarEnemyStatus = require('./RadarEnemyStatus.js');
 let SentryAttackingTarget = require('./SentryAttackingTarget.js');
 let RadarRadioData = require('./RadarRadioData.js');
 let DartClientCmd = require('./DartClientCmd.js');
+let RadarDoubleKey = require('./RadarDoubleKey.js');
 let RadarCmd = require('./RadarCmd.js');
 let StateCmd = require('./StateCmd.js');
 let GameRobotPosData = require('./GameRobotPosData.js');
@@ -155,6 +156,7 @@ module.exports = {
   SentryAttackingTarget: SentryAttackingTarget,
   RadarRadioData: RadarRadioData,
   DartClientCmd: DartClientCmd,
+  RadarDoubleKey: RadarDoubleKey,
   RadarCmd: RadarCmd,
   StateCmd: StateCmd,
   GameRobotPosData: GameRobotPosData,

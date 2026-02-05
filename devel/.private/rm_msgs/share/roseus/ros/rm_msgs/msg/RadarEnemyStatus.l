@@ -14,7 +14,7 @@
 
 (defclass rm_msgs::RadarEnemyStatus
   :super ros::object
-  :slots (_remainder_coin _total_coin _status_bitmask _enemy_assembly _enemy_ring_highland _enemy_trapezoidal_highland _enemy_fort _enemy_outpost _enemy_flying_slope_pre _enemy_flying_slope_post _enemy_highway_tunnel_l _enemy_highway_tunnel_h _enemy_central_high _enemy_central_low _enemy_highway_high ))
+  :slots (_remainder_coin _total_coin _status_bitmask _enemy_assembly _enemy_ring_highland _enemy_trapezoidal_highland _enemy_fort _enemy_outpost _enemy_base_buff _enemy_flying_slope_pre _enemy_flying_slope_post _enemy_highway_tunnel_l _enemy_highway_tunnel_h _enemy_central_high _enemy_central_low _enemy_highway_high ))
 
 (defmethod rm_msgs::RadarEnemyStatus
   (:init
@@ -27,6 +27,7 @@
     ((:enemy_trapezoidal_highland __enemy_trapezoidal_highland) nil)
     ((:enemy_fort __enemy_fort) nil)
     ((:enemy_outpost __enemy_outpost) nil)
+    ((:enemy_base_buff __enemy_base_buff) nil)
     ((:enemy_flying_slope_pre __enemy_flying_slope_pre) nil)
     ((:enemy_flying_slope_post __enemy_flying_slope_post) nil)
     ((:enemy_highway_tunnel_l __enemy_highway_tunnel_l) nil)
@@ -44,6 +45,7 @@
    (setq _enemy_trapezoidal_highland __enemy_trapezoidal_highland)
    (setq _enemy_fort __enemy_fort)
    (setq _enemy_outpost __enemy_outpost)
+   (setq _enemy_base_buff __enemy_base_buff)
    (setq _enemy_flying_slope_pre __enemy_flying_slope_pre)
    (setq _enemy_flying_slope_post __enemy_flying_slope_post)
    (setq _enemy_highway_tunnel_l __enemy_highway_tunnel_l)
@@ -76,6 +78,9 @@
   (:enemy_outpost
    (&optional (__enemy_outpost :null))
    (if (not (eq __enemy_outpost :null)) (setq _enemy_outpost __enemy_outpost)) _enemy_outpost)
+  (:enemy_base_buff
+   (&optional (__enemy_base_buff :null))
+   (if (not (eq __enemy_base_buff :null)) (setq _enemy_base_buff __enemy_base_buff)) _enemy_base_buff)
   (:enemy_flying_slope_pre
    (&optional (__enemy_flying_slope_pre :null))
    (if (not (eq __enemy_flying_slope_pre :null)) (setq _enemy_flying_slope_pre __enemy_flying_slope_pre)) _enemy_flying_slope_pre)
@@ -116,6 +121,8 @@
     1
     ;; bool _enemy_outpost
     1
+    ;; bool _enemy_base_buff
+    1
     ;; bool _enemy_flying_slope_pre
     1
     ;; bool _enemy_flying_slope_post
@@ -151,6 +158,8 @@
        (if _enemy_fort (write-byte -1 s) (write-byte 0 s))
      ;; bool _enemy_outpost
        (if _enemy_outpost (write-byte -1 s) (write-byte 0 s))
+     ;; bool _enemy_base_buff
+       (if _enemy_base_buff (write-byte -1 s) (write-byte 0 s))
      ;; bool _enemy_flying_slope_pre
        (if _enemy_flying_slope_pre (write-byte -1 s) (write-byte 0 s))
      ;; bool _enemy_flying_slope_post
@@ -185,6 +194,8 @@
      (setq _enemy_fort (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; bool _enemy_outpost
      (setq _enemy_outpost (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
+   ;; bool _enemy_base_buff
+     (setq _enemy_base_buff (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; bool _enemy_flying_slope_pre
      (setq _enemy_flying_slope_pre (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; bool _enemy_flying_slope_post
@@ -203,7 +214,7 @@
    self)
   )
 
-(setf (get rm_msgs::RadarEnemyStatus :md5sum-) "51afc1aaa64cc6b69b332c25df8411d0")
+(setf (get rm_msgs::RadarEnemyStatus :md5sum-) "392f33a234e14207b0df7f118c14e256")
 (setf (get rm_msgs::RadarEnemyStatus :datatype-) "rm_msgs/RadarEnemyStatus")
 (setf (get rm_msgs::RadarEnemyStatus :definition-)
       "uint16 remainder_coin
@@ -221,6 +232,8 @@ bool enemy_trapezoidal_highland
 bool enemy_fort
 # Bit 6-7
 bool enemy_outpost
+# Bit 8 (Base Buff Point)
+bool enemy_base_buff
 # Bit 9 (Flying Slope Pre)
 bool enemy_flying_slope_pre
 # Bit 10 (Flying Slope Post)
@@ -236,10 +249,12 @@ bool enemy_central_low
 # Bit 15 (Highland Road)
 bool enemy_highway_high
 
+
+
 ")
 
 
 
-(provide :rm_msgs/RadarEnemyStatus "51afc1aaa64cc6b69b332c25df8411d0")
+(provide :rm_msgs/RadarEnemyStatus "392f33a234e14207b0df7f118c14e256")
 
 

@@ -98,6 +98,9 @@ add_message_files(
         RadarEnemyBuff.msg
         RadarEnemyBulletAllowance.msg
         RadarEnemyHp.msg
+        RadarEnemyStatus.msg
+        RadarEnemyPosition.msg
+        RadarDoubleKey.msg
         RadarEnemyPosition.msg
         RadarEnemyStatus.msg
         RadarRobotBuff.msg

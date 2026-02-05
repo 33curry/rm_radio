@@ -54,6 +54,7 @@ file(REMOVE_RECURSE
   "/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/PriorityArray.h"
   "/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarCmd.h"
   "/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarData.h"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarDoubleKey.h"
   "/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarEnemyBuff.h"
   "/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarEnemyBulletAllowance.h"
   "/home/robot/radio_ws/devel/.private/rm_msgs/include/rm_msgs/RadarEnemyHp.h"

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/robot/radio_ws/devel/.private/radio_referee_parser/setup.sh

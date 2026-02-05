@@ -49,6 +49,7 @@ from ._PowerManagementUnknownExceptionData import *
 from ._PriorityArray import *
 from ._RadarCmd import *
 from ._RadarData import *
+from ._RadarDoubleKey import *
 from ._RadarEnemyBuff import *
 from ._RadarEnemyBulletAllowance import *
 from ._RadarEnemyHp import *

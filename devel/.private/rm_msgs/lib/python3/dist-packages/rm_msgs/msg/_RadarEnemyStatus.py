@@ -8,7 +8,7 @@ import struct
 
 
 class RadarEnemyStatus(genpy.Message):
-  _md5sum = "51afc1aaa64cc6b69b332c25df8411d0"
+  _md5sum = "392f33a234e14207b0df7f118c14e256"
   _type = "rm_msgs/RadarEnemyStatus"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """uint16 remainder_coin
@@ -26,6 +26,8 @@ bool enemy_trapezoidal_highland
 bool enemy_fort
 # Bit 6-7
 bool enemy_outpost
+# Bit 8 (Base Buff Point)
+bool enemy_base_buff
 # Bit 9 (Flying Slope Pre)
 bool enemy_flying_slope_pre
 # Bit 10 (Flying Slope Post)
@@ -40,9 +42,11 @@ bool enemy_central_high
 bool enemy_central_low
 # Bit 15 (Highland Road)
 bool enemy_highway_high
+
+
 """
-  __slots__ = ['remainder_coin','total_coin','status_bitmask','enemy_assembly','enemy_ring_highland','enemy_trapezoidal_highland','enemy_fort','enemy_outpost','enemy_flying_slope_pre','enemy_flying_slope_post','enemy_highway_tunnel_l','enemy_highway_tunnel_h','enemy_central_high','enemy_central_low','enemy_highway_high']
-  _slot_types = ['uint16','uint16','uint32','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool']
+  __slots__ = ['remainder_coin','total_coin','status_bitmask','enemy_assembly','enemy_ring_highland','enemy_trapezoidal_highland','enemy_fort','enemy_outpost','enemy_base_buff','enemy_flying_slope_pre','enemy_flying_slope_post','enemy_highway_tunnel_l','enemy_highway_tunnel_h','enemy_central_high','enemy_central_low','enemy_highway_high']
+  _slot_types = ['uint16','uint16','uint32','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool','bool']
 
   def __init__(self, *args, **kwds):
     """
@@ -52,7 +56,7 @@ bool enemy_highway_high
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       remainder_coin,total_coin,status_bitmask,enemy_assembly,enemy_ring_highland,enemy_trapezoidal_highland,enemy_fort,enemy_outpost,enemy_flying_slope_pre,enemy_flying_slope_post,enemy_highway_tunnel_l,enemy_highway_tunnel_h,enemy_central_high,enemy_central_low,enemy_highway_high
+       remainder_coin,total_coin,status_bitmask,enemy_assembly,enemy_ring_highland,enemy_trapezoidal_highland,enemy_fort,enemy_outpost,enemy_base_buff,enemy_flying_slope_pre,enemy_flying_slope_post,enemy_highway_tunnel_l,enemy_highway_tunnel_h,enemy_central_high,enemy_central_low,enemy_highway_high
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -77,6 +81,8 @@ bool enemy_highway_high
         self.enemy_fort = False
       if self.enemy_outpost is None:
         self.enemy_outpost = False
+      if self.enemy_base_buff is None:
+        self.enemy_base_buff = False
       if self.enemy_flying_slope_pre is None:
         self.enemy_flying_slope_pre = False
       if self.enemy_flying_slope_post is None:
@@ -100,6 +106,7 @@ bool enemy_highway_high
       self.enemy_trapezoidal_highland = False
       self.enemy_fort = False
       self.enemy_outpost = False
+      self.enemy_base_buff = False
       self.enemy_flying_slope_pre = False
       self.enemy_flying_slope_post = False
       self.enemy_highway_tunnel_l = False
@@ -121,7 +128,7 @@ bool enemy_highway_high
     """
     try:
       _x = self
-      buff.write(_get_struct_2HI12B().pack(_x.remainder_coin, _x.total_coin, _x.status_bitmask, _x.enemy_assembly, _x.enemy_ring_highland, _x.enemy_trapezoidal_highland, _x.enemy_fort, _x.enemy_outpost, _x.enemy_flying_slope_pre, _x.enemy_flying_slope_post, _x.enemy_highway_tunnel_l, _x.enemy_highway_tunnel_h, _x.enemy_central_high, _x.enemy_central_low, _x.enemy_highway_high))
+      buff.write(_get_struct_2HI13B().pack(_x.remainder_coin, _x.total_coin, _x.status_bitmask, _x.enemy_assembly, _x.enemy_ring_highland, _x.enemy_trapezoidal_highland, _x.enemy_fort, _x.enemy_outpost, _x.enemy_base_buff, _x.enemy_flying_slope_pre, _x.enemy_flying_slope_post, _x.enemy_highway_tunnel_l, _x.enemy_highway_tunnel_h, _x.enemy_central_high, _x.enemy_central_low, _x.enemy_highway_high))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -136,13 +143,14 @@ bool enemy_highway_high
       end = 0
       _x = self
       start = end
-      end += 20
-      (_x.remainder_coin, _x.total_coin, _x.status_bitmask, _x.enemy_assembly, _x.enemy_ring_highland, _x.enemy_trapezoidal_highland, _x.enemy_fort, _x.enemy_outpost, _x.enemy_flying_slope_pre, _x.enemy_flying_slope_post, _x.enemy_highway_tunnel_l, _x.enemy_highway_tunnel_h, _x.enemy_central_high, _x.enemy_central_low, _x.enemy_highway_high,) = _get_struct_2HI12B().unpack(str[start:end])
+      end += 21
+      (_x.remainder_coin, _x.total_coin, _x.status_bitmask, _x.enemy_assembly, _x.enemy_ring_highland, _x.enemy_trapezoidal_highland, _x.enemy_fort, _x.enemy_outpost, _x.enemy_base_buff, _x.enemy_flying_slope_pre, _x.enemy_flying_slope_post, _x.enemy_highway_tunnel_l, _x.enemy_highway_tunnel_h, _x.enemy_central_high, _x.enemy_central_low, _x.enemy_highway_high,) = _get_struct_2HI13B().unpack(str[start:end])
       self.enemy_assembly = bool(self.enemy_assembly)
       self.enemy_ring_highland = bool(self.enemy_ring_highland)
       self.enemy_trapezoidal_highland = bool(self.enemy_trapezoidal_highland)
       self.enemy_fort = bool(self.enemy_fort)
       self.enemy_outpost = bool(self.enemy_outpost)
+      self.enemy_base_buff = bool(self.enemy_base_buff)
       self.enemy_flying_slope_pre = bool(self.enemy_flying_slope_pre)
       self.enemy_flying_slope_post = bool(self.enemy_flying_slope_post)
       self.enemy_highway_tunnel_l = bool(self.enemy_highway_tunnel_l)
@@ -163,7 +171,7 @@ bool enemy_highway_high
     """
     try:
       _x = self
-      buff.write(_get_struct_2HI12B().pack(_x.remainder_coin, _x.total_coin, _x.status_bitmask, _x.enemy_assembly, _x.enemy_ring_highland, _x.enemy_trapezoidal_highland, _x.enemy_fort, _x.enemy_outpost, _x.enemy_flying_slope_pre, _x.enemy_flying_slope_post, _x.enemy_highway_tunnel_l, _x.enemy_highway_tunnel_h, _x.enemy_central_high, _x.enemy_central_low, _x.enemy_highway_high))
+      buff.write(_get_struct_2HI13B().pack(_x.remainder_coin, _x.total_coin, _x.status_bitmask, _x.enemy_assembly, _x.enemy_ring_highland, _x.enemy_trapezoidal_highland, _x.enemy_fort, _x.enemy_outpost, _x.enemy_base_buff, _x.enemy_flying_slope_pre, _x.enemy_flying_slope_post, _x.enemy_highway_tunnel_l, _x.enemy_highway_tunnel_h, _x.enemy_central_high, _x.enemy_central_low, _x.enemy_highway_high))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -179,13 +187,14 @@ bool enemy_highway_high
       end = 0
       _x = self
       start = end
-      end += 20
-      (_x.remainder_coin, _x.total_coin, _x.status_bitmask, _x.enemy_assembly, _x.enemy_ring_highland, _x.enemy_trapezoidal_highland, _x.enemy_fort, _x.enemy_outpost, _x.enemy_flying_slope_pre, _x.enemy_flying_slope_post, _x.enemy_highway_tunnel_l, _x.enemy_highway_tunnel_h, _x.enemy_central_high, _x.enemy_central_low, _x.enemy_highway_high,) = _get_struct_2HI12B().unpack(str[start:end])
+      end += 21
+      (_x.remainder_coin, _x.total_coin, _x.status_bitmask, _x.enemy_assembly, _x.enemy_ring_highland, _x.enemy_trapezoidal_highland, _x.enemy_fort, _x.enemy_outpost, _x.enemy_base_buff, _x.enemy_flying_slope_pre, _x.enemy_flying_slope_post, _x.enemy_highway_tunnel_l, _x.enemy_highway_tunnel_h, _x.enemy_central_high, _x.enemy_central_low, _x.enemy_highway_high,) = _get_struct_2HI13B().unpack(str[start:end])
       self.enemy_assembly = bool(self.enemy_assembly)
       self.enemy_ring_highland = bool(self.enemy_ring_highland)
       self.enemy_trapezoidal_highland = bool(self.enemy_trapezoidal_highland)
       self.enemy_fort = bool(self.enemy_fort)
       self.enemy_outpost = bool(self.enemy_outpost)
+      self.enemy_base_buff = bool(self.enemy_base_buff)
       self.enemy_flying_slope_pre = bool(self.enemy_flying_slope_pre)
       self.enemy_flying_slope_post = bool(self.enemy_flying_slope_post)
       self.enemy_highway_tunnel_l = bool(self.enemy_highway_tunnel_l)
@@ -201,9 +210,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2HI12B = None
-def _get_struct_2HI12B():
-    global _struct_2HI12B
-    if _struct_2HI12B is None:
-        _struct_2HI12B = struct.Struct("<2HI12B")
-    return _struct_2HI12B
+_struct_2HI13B = None
+def _get_struct_2HI13B():
+    global _struct_2HI13B
+    if _struct_2HI13B is None:
+        _struct_2HI13B = struct.Struct("<2HI13B")
+    return _struct_2HI13B

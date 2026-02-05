@@ -88,6 +88,8 @@ void RadioRefereeParser::onInit()
   
   // 0x0A05 (Assuming float array for simplicity of viewing all buffs)
   enemy_buff_pub_ = nh_.advertise<rm_msgs::RadarEnemyBuff>("/referee_parser/radar/enemy_buff", 1);
+  // 0x0A06
+  double_key_pub_ = nh_.advertise<rm_msgs::RadarDoubleKey>("/referee_parser/radar/double_key", 1);
 
   ROS_INFO("Radio Referee Parser initialized - RADAR MODE");
 
@@ -217,7 +219,7 @@ void RadioRefereeParser::serialThreadLoop()
         case UnpackState::WAIT_DATA:
             packet_buf.push_back(byte);
             // Header(5) + CmdID(2) + Data(data_len)
-            if (packet_buf.size() == 5 + 2 + data_len) {
+            if (packet_buf.size() == (size_t)(5 + 2 + data_len)) {
                 state = UnpackState::WAIT_CRC16_LOW;
             }
             break;
@@ -241,6 +243,7 @@ void RadioRefereeParser::serialThreadLoop()
                     case MsgType::ENEMY_BULLET_ALLOWANCE: parseEnemyBulletAllowance(payload, data_len); break;
                     case MsgType::ENEMY_STATUS:   parseEnemyStatus(payload, data_len); break;
                     case MsgType::ENEMY_BUFF:     parseEnemyBuff(payload, data_len); break;
+                    case MsgType::DOUBLE_KEY:     parseDoubleKey(payload, data_len); break;
                     default: break;
                 }
             }
@@ -512,6 +515,20 @@ void RadioRefereeParser::parseEnemyBuff(const uint8_t* data, uint16_t length)
   msg.sentry_status = b->sentry_status;
   
   enemy_buff_pub_.publish(msg);
+}
+
+void RadioRefereeParser::parseDoubleKey(const uint8_t* data, uint16_t length)
+{
+  // ID: 0x0A06 密钥
+  if (length < 6) return;
+
+  rm_msgs::RadarDoubleKey msg;
+  // 直接拷贝6个字节
+  for(int i = 0; i < 6; ++i) {
+      msg.key[i] = data[i];
+  }
+  
+  double_key_pub_.publish(msg);
 }
 
 }  // namespace radio_referee_parser

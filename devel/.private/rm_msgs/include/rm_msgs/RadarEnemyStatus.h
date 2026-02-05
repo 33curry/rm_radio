@@ -32,6 +32,7 @@ struct RadarEnemyStatus_
     , enemy_trapezoidal_highland(false)
     , enemy_fort(false)
     , enemy_outpost(false)
+    , enemy_base_buff(false)
     , enemy_flying_slope_pre(false)
     , enemy_flying_slope_post(false)
     , enemy_highway_tunnel_l(false)
@@ -49,6 +50,7 @@ struct RadarEnemyStatus_
     , enemy_trapezoidal_highland(false)
     , enemy_fort(false)
     , enemy_outpost(false)
+    , enemy_base_buff(false)
     , enemy_flying_slope_pre(false)
     , enemy_flying_slope_post(false)
     , enemy_highway_tunnel_l(false)
@@ -84,6 +86,9 @@ struct RadarEnemyStatus_
 
    typedef uint8_t _enemy_outpost_type;
   _enemy_outpost_type enemy_outpost;
+
+   typedef uint8_t _enemy_base_buff_type;
+  _enemy_base_buff_type enemy_base_buff;
 
    typedef uint8_t _enemy_flying_slope_pre_type;
   _enemy_flying_slope_pre_type enemy_flying_slope_pre;
@@ -143,6 +148,7 @@ bool operator==(const ::rm_msgs::RadarEnemyStatus_<ContainerAllocator1> & lhs, c
     lhs.enemy_trapezoidal_highland == rhs.enemy_trapezoidal_highland &&
     lhs.enemy_fort == rhs.enemy_fort &&
     lhs.enemy_outpost == rhs.enemy_outpost &&
+    lhs.enemy_base_buff == rhs.enemy_base_buff &&
     lhs.enemy_flying_slope_pre == rhs.enemy_flying_slope_pre &&
     lhs.enemy_flying_slope_post == rhs.enemy_flying_slope_post &&
     lhs.enemy_highway_tunnel_l == rhs.enemy_highway_tunnel_l &&
@@ -206,12 +212,12 @@ struct MD5Sum< ::rm_msgs::RadarEnemyStatus_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "51afc1aaa64cc6b69b332c25df8411d0";
+    return "392f33a234e14207b0df7f118c14e256";
   }
 
   static const char* value(const ::rm_msgs::RadarEnemyStatus_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x51afc1aaa64cc6b6ULL;
-  static const uint64_t static_value2 = 0x9b332c25df8411d0ULL;
+  static const uint64_t static_value1 = 0x392f33a234e14207ULL;
+  static const uint64_t static_value2 = 0xb0df7f118c14e256ULL;
 };
 
 template<class ContainerAllocator>
@@ -245,6 +251,8 @@ struct Definition< ::rm_msgs::RadarEnemyStatus_<ContainerAllocator> >
 "bool enemy_fort\n"
 "# Bit 6-7\n"
 "bool enemy_outpost\n"
+"# Bit 8 (Base Buff Point)\n"
+"bool enemy_base_buff\n"
 "# Bit 9 (Flying Slope Pre)\n"
 "bool enemy_flying_slope_pre\n"
 "# Bit 10 (Flying Slope Post)\n"
@@ -259,6 +267,8 @@ struct Definition< ::rm_msgs::RadarEnemyStatus_<ContainerAllocator> >
 "bool enemy_central_low\n"
 "# Bit 15 (Highland Road)\n"
 "bool enemy_highway_high\n"
+"\n"
+"\n"
 ;
   }
 
@@ -285,6 +295,7 @@ namespace serialization
       stream.next(m.enemy_trapezoidal_highland);
       stream.next(m.enemy_fort);
       stream.next(m.enemy_outpost);
+      stream.next(m.enemy_base_buff);
       stream.next(m.enemy_flying_slope_pre);
       stream.next(m.enemy_flying_slope_post);
       stream.next(m.enemy_highway_tunnel_l);
@@ -342,6 +353,10 @@ struct Printer< ::rm_msgs::RadarEnemyStatus_<ContainerAllocator> >
       s << std::endl;
     s << indent << "enemy_outpost: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.enemy_outpost);
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "enemy_base_buff: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.enemy_base_buff);
     if (true || !indent.empty())
       s << std::endl;
     s << indent << "enemy_flying_slope_pre: ";

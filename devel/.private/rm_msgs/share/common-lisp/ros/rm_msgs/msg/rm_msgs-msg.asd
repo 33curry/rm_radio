@@ -109,6 +109,8 @@
     (:file "_package_RadarCmd" :depends-on ("_package"))
     (:file "RadarData" :depends-on ("_package_RadarData"))
     (:file "_package_RadarData" :depends-on ("_package"))
+    (:file "RadarDoubleKey" :depends-on ("_package_RadarDoubleKey"))
+    (:file "_package_RadarDoubleKey" :depends-on ("_package"))
     (:file "RadarEnemyBuff" :depends-on ("_package_RadarEnemyBuff"))
     (:file "_package_RadarEnemyBuff" :depends-on ("_package"))
     (:file "RadarEnemyBulletAllowance" :depends-on ("_package_RadarEnemyBulletAllowance"))

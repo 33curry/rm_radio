@@ -50,6 +50,7 @@ file(REMOVE_RECURSE
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/PriorityArray.lisp"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarCmd.lisp"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarData.lisp"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarDoubleKey.lisp"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarEnemyBuff.lisp"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarEnemyBulletAllowance.lisp"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/common-lisp/ros/rm_msgs/msg/RadarEnemyHp.lisp"

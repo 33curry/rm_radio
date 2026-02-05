@@ -50,6 +50,7 @@ file(REMOVE_RECURSE
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/PriorityArray.js"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarCmd.js"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarData.js"
+  "/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarDoubleKey.js"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarEnemyBuff.js"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarEnemyBulletAllowance.js"
   "/home/robot/radio_ws/devel/.private/rm_msgs/share/gennodejs/ros/rm_msgs/msg/RadarEnemyHp.js"
