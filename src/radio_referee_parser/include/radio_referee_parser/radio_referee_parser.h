@@ -11,6 +11,9 @@
 #include <rm_msgs/RadarEnemyBuff.h>
 #include <cstdint>
 #include <nodelet/nodelet.h>
+#include <serial/serial.h>
+#include <thread>
+#include <vector>
 
 // 标准 packed 属性
 #if defined(__GNUC__) || defined(__clang__)
@@ -47,7 +50,12 @@ public:
 
 private:
   ros::NodeHandle nh_;
+  serial::Serial serial_;
 
+  /* 串口线程 */
+  std::thread serial_thread_;
+  void serialThreadLoop();
+  
   /* 订阅原始字节流 */
   ros::Subscriber radio_referee_sub_;
 

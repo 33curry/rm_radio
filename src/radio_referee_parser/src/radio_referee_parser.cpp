@@ -90,13 +90,172 @@ void RadioRefereeParser::onInit()
   enemy_buff_pub_ = nh_.advertise<rm_msgs::RadarEnemyBuff>("/referee_parser/radar/enemy_buff", 1);
 
   ROS_INFO("Radio Referee Parser initialized - RADAR MODE");
+
+  // 初始化串口
+  try {
+    serial_.setPort("/dev/ttyUSB0"); // 请根据实际设备修改
+    serial_.setBaudrate(115200);
+    serial::Timeout timeout = serial::Timeout::simpleTimeout(50);
+    serial_.setTimeout(timeout);
+    serial_.open();
+  } catch (serial::IOException& e) {
+    ROS_ERROR_STREAM("Unable to open port: " << e.what());
+    return;
+  }
+
+  if(serial_.isOpen()){
+    ROS_INFO("Serial Port initialized");
+    // 启动接收线程
+    serial_thread_ = std::thread(&RadioRefereeParser::serialThreadLoop, this);
+    serial_thread_.detach(); // 守护线程处理接收
+  }
+}
+
+// 定义状态机状态
+enum class UnpackState {
+    WAIT_SOF,
+    WAIT_LEN_LOW,
+    WAIT_LEN_HIGH,
+    WAIT_SEQ,
+    WAIT_CRC8,
+    WAIT_CMD_ID_LOW,
+    WAIT_CMD_ID_HIGH,
+    WAIT_DATA,
+    WAIT_CRC16_LOW,
+    WAIT_CRC16_HIGH
+};
+
+void RadioRefereeParser::serialThreadLoop()
+{
+  ROS_INFO("Serial thread start - Optimized FSM Mode");
+  
+  constexpr uint8_t SOF = 0xA5;
+  constexpr size_t MAX_PACKET_SIZE = 512; // 协议最大包长
+  
+  uint8_t byte;
+  UnpackState state = UnpackState::WAIT_SOF;
+  
+  // 解析缓冲区及变量
+  std::vector<uint8_t> packet_buf;
+  packet_buf.reserve(MAX_PACKET_SIZE);
+  uint16_t data_len = 0;
+
+  while(ros::ok()) {
+    // 尽量多读一点，减少系统调用开销
+    uint8_t read_tmp[1024];
+    size_t n = 0;
+    try {
+        if(serial_.available()){
+            n = serial_.read(read_tmp, sizeof(read_tmp));
+        } else {
+            std::this_thread::sleep_for(std::chrono::milliseconds(1));
+            continue;
+        }
+    } catch (const std::exception& e) {
+        ROS_ERROR_THROTTLE(1, "Serial read error: %s", e.what());
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        continue;
+    }
+
+    if (n == 0) continue;
+
+    // 逐字节进入状态机
+    for (size_t i = 0; i < n; ++i) {
+        byte = read_tmp[i];
+        
+        switch (state) {
+        case UnpackState::WAIT_SOF:
+            if (byte == SOF) {
+                packet_buf.clear();
+                packet_buf.push_back(byte);
+                state = UnpackState::WAIT_LEN_LOW;
+            }
+            break;
+
+        case UnpackState::WAIT_LEN_LOW:
+            packet_buf.push_back(byte);
+            data_len = byte;
+            state = UnpackState::WAIT_LEN_HIGH;
+            break;
+
+        case UnpackState::WAIT_LEN_HIGH:
+            packet_buf.push_back(byte);
+            data_len |= (byte << 8);
+            state = UnpackState::WAIT_SEQ;
+            break;
+            
+        case UnpackState::WAIT_SEQ:
+            packet_buf.push_back(byte);
+            state = UnpackState::WAIT_CRC8;
+            break;
+
+        case UnpackState::WAIT_CRC8: 
+             packet_buf.push_back(byte);
+             // Header 接收完毕 SOF(1)+LEN(2)+SEQ(1)+CRC8(1) = 5 bytes
+             // 立即校验 CRC8
+             if (Get_CRC8_Check_Sum(packet_buf.data(), 4) == byte) {
+                 state = UnpackState::WAIT_CMD_ID_LOW;
+             } else {
+                 state = UnpackState::WAIT_SOF; // 校验失败，重置
+             }
+             break;
+             
+        case UnpackState::WAIT_CMD_ID_LOW:
+            packet_buf.push_back(byte);
+            state = UnpackState::WAIT_CMD_ID_HIGH;
+            break;
+
+        case UnpackState::WAIT_CMD_ID_HIGH:
+            packet_buf.push_back(byte);
+            if(data_len > 0) {
+                state = UnpackState::WAIT_DATA;
+            } else {
+                state = UnpackState::WAIT_CRC16_LOW;
+            }
+            break;
+
+        case UnpackState::WAIT_DATA:
+            packet_buf.push_back(byte);
+            // Header(5) + CmdID(2) + Data(data_len)
+            if (packet_buf.size() == 5 + 2 + data_len) {
+                state = UnpackState::WAIT_CRC16_LOW;
+            }
+            break;
+
+        case UnpackState::WAIT_CRC16_LOW:
+            packet_buf.push_back(byte);
+            state = UnpackState::WAIT_CRC16_HIGH;
+            break;
+
+        case UnpackState::WAIT_CRC16_HIGH:
+            packet_buf.push_back(byte);
+            // 全包接收完毕，校验 CRC16
+            if (Verify_CRC16_Check_Sum(packet_buf.data(), packet_buf.size())) {
+                // 校验通过，提取 CmdID 并解析
+                uint16_t cmd_id = packet_buf[5] | (packet_buf[6] << 8);
+                const uint8_t* payload = &packet_buf[7];
+                // 分发逻辑
+                switch ((MsgType)cmd_id) {
+                    case MsgType::ENEMY_POSITION: parseEnemyPosition(payload, data_len); break;
+                    case MsgType::ENEMY_HP:       parseEnemyHp(payload, data_len); break;
+                    case MsgType::ENEMY_BULLET_ALLOWANCE: parseEnemyBulletAllowance(payload, data_len); break;
+                    case MsgType::ENEMY_STATUS:   parseEnemyStatus(payload, data_len); break;
+                    case MsgType::ENEMY_BUFF:     parseEnemyBuff(payload, data_len); break;
+                    default: break;
+                }
+            }
+            state = UnpackState::WAIT_SOF;
+            break;
+        }
+    }
+  }
 }
 
 void RadioRefereeParser::radioRefereeDataCallback(const rm_msgs::RadarRadioData::ConstPtr& msg)
 {
   // 协议化缓冲区拼包、校验、分发
   static std::vector<uint8_t> buffer;
-  // 假设msg->data为原始字节流
+  // msg->data为原始字节流
   const uint8_t* raw = msg->data.data();
   size_t read_len = msg->data.size();
   buffer.insert(buffer.end(), raw, raw + read_len);
@@ -137,7 +296,7 @@ void RadioRefereeParser::radioRefereeDataCallback(const rm_msgs::RadarRadioData:
     const uint8_t* payload = &buffer[sof_index + FRAME_HEADER_LEN + 2];
     uint16_t payload_len = data_length;
 
-    // 只处理雷达/无限链路数据 (0x0A01 - 0x0A05)
+    // 只处理无线链路数据 (0x0A01 - 0x0A05)
     switch ((MsgType)cmd_id) {
       case MsgType::ENEMY_POSITION:
         parseEnemyPosition(payload, payload_len);
@@ -283,6 +442,9 @@ void RadioRefereeParser::parseEnemyStatus(const uint8_t* data, uint16_t length)
   // Bit 6-7: Outpost (0=Un, 1=Enemy, 2=Ally)
   uint8_t outpost = (bits >> 6) & 0x03;
   msg.enemy_outpost = (outpost == 1);
+
+  // Bit 8: Base Buff Point (对方基地增益点)
+  msg.enemy_base_buff = ((bits >> 8) & 0x01);
 
   // Bit 9: Flying Slope Pre
   msg.enemy_flying_slope_pre = ((bits >> 9)  & 0x01);
