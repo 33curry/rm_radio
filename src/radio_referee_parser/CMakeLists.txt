@@ -13,6 +13,7 @@ find_package(catkin REQUIRED
         std_msgs
         geometry_msgs
         nodelet
+        serial
         )
 
 catkin_package(
@@ -24,6 +25,7 @@ catkin_package(
         std_msgs
         geometry_msgs
         nodelet
+        serial
 )
 
 include_directories(

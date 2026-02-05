@@ -8,8 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/robot/radio_ws/devel/.private/radio_referee_parser:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/robot/radio_ws/devel/.private/radio_referee_parser/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/robot/radio_ws/devel/.private/radio_referee_parser/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/robot/radio_ws/build/radio_referee_parser'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/robot/radio_ws/devel/.private/radio_referee_parser/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/robot/radio_ws/src/radio_referee_parser:$ROS_PACKAGE_PATH"

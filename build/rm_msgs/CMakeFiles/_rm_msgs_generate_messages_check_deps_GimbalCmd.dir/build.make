@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/robot/radio_ws/build/rm_msgs
 include CMakeFiles/_rm_msgs_generate_messages_check_deps_GimbalCmd.dir/progress.make
 
 CMakeFiles/_rm_msgs_generate_messages_check_deps_GimbalCmd:
-	catkin_generated/env_cached.sh /home/robot/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rm_msgs /home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalCmd.msg geometry_msgs/PointStamped:std_msgs/Header:geometry_msgs/Point
+	catkin_generated/env_cached.sh /home/robot/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rm_msgs /home/robot/radio_ws/src/rm_control/rm_msgs/msg/GimbalCmd.msg std_msgs/Header:geometry_msgs/PointStamped:geometry_msgs/Point
 
 _rm_msgs_generate_messages_check_deps_GimbalCmd: CMakeFiles/_rm_msgs_generate_messages_check_deps_GimbalCmd
 _rm_msgs_generate_messages_check_deps_GimbalCmd: CMakeFiles/_rm_msgs_generate_messages_check_deps_GimbalCmd.dir/build.make

@@ -53,10 +53,10 @@
   "4e7c4656cadf17b1c0d247eed3cdf8e2")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<RadarDoubleKey>)))
   "Returns full string definition for message of type '<RadarDoubleKey>"
-  (cl:format cl:nil "uint8[6] key~%~%~%"))
+  (cl:format cl:nil "uint8[6] key~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'RadarDoubleKey)))
   "Returns full string definition for message of type 'RadarDoubleKey"
-  (cl:format cl:nil "uint8[6] key~%~%~%"))
+  (cl:format cl:nil "uint8[6] key~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <RadarDoubleKey>))
   (cl:+ 0
      0 (cl:reduce #'cl:+ (cl:slot-value msg 'key) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 1)))

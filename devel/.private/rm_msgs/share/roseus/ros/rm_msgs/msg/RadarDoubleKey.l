@@ -54,7 +54,6 @@
 (setf (get rm_msgs::RadarDoubleKey :datatype-) "rm_msgs/RadarDoubleKey")
 (setf (get rm_msgs::RadarDoubleKey :definition-)
       "uint8[6] key
-
 ")
 
 

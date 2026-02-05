@@ -187,7 +187,7 @@ foreach(t ${radio_referee_parser_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "roscpp;rm_msgs;std_msgs;geometry_msgs;nodelet")
+set(depends "roscpp;rm_msgs;std_msgs;geometry_msgs;nodelet;serial")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

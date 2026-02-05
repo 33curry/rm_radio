@@ -68,7 +68,6 @@ class RadarDoubleKey {
     // Returns full string definition for message
     return `
     uint8[6] key
-    
     `;
   }
 

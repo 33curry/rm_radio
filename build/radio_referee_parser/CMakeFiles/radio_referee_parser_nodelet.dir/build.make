@@ -108,6 +108,7 @@ radio_referee_parser_nodelet_EXTERNAL_OBJECTS =
 /home/robot/radio_ws/devel/.private/radio_referee_parser/lib/libradio_referee_parser_nodelet.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 /home/robot/radio_ws/devel/.private/radio_referee_parser/lib/libradio_referee_parser_nodelet.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/robot/radio_ws/devel/.private/radio_referee_parser/lib/libradio_referee_parser_nodelet.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/robot/radio_ws/devel/.private/radio_referee_parser/lib/libradio_referee_parser_nodelet.so: /opt/ros/noetic/lib/libserial.so
 /home/robot/radio_ws/devel/.private/radio_referee_parser/lib/libradio_referee_parser_nodelet.so: CMakeFiles/radio_referee_parser_nodelet.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robot/radio_ws/build/radio_referee_parser/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/robot/radio_ws/devel/.private/radio_referee_parser/lib/libradio_referee_parser_nodelet.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/radio_referee_parser_nodelet.dir/link.txt --verbose=$(VERBOSE)

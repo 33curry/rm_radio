@@ -474,7 +474,7 @@ gtest_hide_internal_symbols:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/librospack.so
+lib:FILEPATH=/opt/ros/noetic/lib/libserial.so
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
@@ -492,7 +492,7 @@ radio_referee_parser_BINARY_DIR:STATIC=/home/robot/radio_ws/build/radio_referee_
 radio_referee_parser_SOURCE_DIR:STATIC=/home/robot/radio_ws/src/radio_referee_parser
 
 //Dependencies for the target
-radio_referee_parser_nodelet_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/x86_64-linux-gnu/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython3.8.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+radio_referee_parser_nodelet_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libactionlib.so;general;/opt/ros/noetic/lib/libnodeletlib.so;general;/opt/ros/noetic/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/x86_64-linux-gnu/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython3.8.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;general;/opt/ros/noetic/lib/libserial.so;
 
 //The directory containing a CMake configuration file for rm_msgs.
 rm_msgs_DIR:PATH=/home/robot/radio_ws/devel/share/rm_msgs/cmake
@@ -520,6 +520,9 @@ rospack_DIR:PATH=/opt/ros/noetic/share/rospack/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
+
+//The directory containing a CMake configuration file for serial.
+serial_DIR:PATH=/opt/ros/noetic/share/serial/cmake
 
 //The directory containing a CMake configuration file for smclib.
 smclib_DIR:PATH=/opt/ros/noetic/share/smclib/cmake

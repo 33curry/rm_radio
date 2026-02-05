@@ -1,0 +1,43 @@
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target _rm_msgs_generate_messages_check_deps_RadarEnemyBuff
+[  0%] Built target _rm_msgs_generate_messages_check_deps_MovingAverageData
+[  0%] Built target _rm_msgs_generate_messages_check_deps_EngineerActionResult
+[  0%] Built target _rm_msgs_generate_messages_check_deps_GameRobotPosData
+[  0%] Built target _rm_msgs_generate_messages_check_deps_ShootCmd
+[  0%] Built target _rm_msgs_generate_messages_check_deps_ActuatorState
+[  0%] Built target _rm_msgs_generate_messages_check_deps_GpioData
+Traceback (most recent call last):
+  File "/opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py", line 54, in <module>
+    spec = load_msg_from_file(msg_context, msg_file, full_type_name)
+  File "/opt/ros/noetic/lib/python3/dist-packages/genmsg/msg_loader.py", line 284, in load_msg_from_file
+    with open(file_path, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/robot/radio_ws/src/rm_control/rm_msgs/msg/referee/RadarDoubleKey.msg'
+[  0%] Built target _rm_msgs_generate_messages_check_deps_DartRemainingTime
+make[2]: *** [CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarDoubleKey.dir/build.make:57：CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarDoubleKey] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:1263：CMakeFiles/_rm_msgs_generate_messages_check_deps_RadarDoubleKey.dir/all] 错误 2
+make[1]: *** 正在等待未完成的任务....
+[  0%] Built target _rm_msgs_generate_messages_check_deps_PowerManagementSystemExceptionData
+[  0%] Built target _rm_msgs_generate_messages_check_deps_TargetDetection
+[  0%] Built target _rm_msgs_generate_messages_check_deps_TrackData
+[  0%] Built target _rm_msgs_generate_messages_check_deps_StateCmd
+[  0%] Built target _rm_msgs_generate_messages_check_deps_RadarCmd
+[  0%] Built target _rm_msgs_generate_messages_check_deps_BusState
+[  0%] Built target _rm_msgs_generate_messages_check_deps_GameStatus
+[  0%] Built target _rm_msgs_generate_messages_check_deps_RadarEnemyStatus
+[  0%] Built target _rm_msgs_generate_messages_check_deps_LocalHeatState
+[  0%] Built target _rm_msgs_generate_messages_check_deps_GameRobotHp
+[  0%] Built target _rm_msgs_generate_messages_check_deps_SentryDeviate
+[  0%] Built target _rm_msgs_generate_messages_check_deps_ExchangerMsg
+[  0%] Built target _rm_msgs_generate_messages_check_deps_PowerManagementInitializationExceptionData
+[  0%] Built target _rm_msgs_generate_messages_check_deps_EngineerFeedback
+[  0%] Built target _rm_msgs_generate_messages_check_deps_EnableGyro
+[  0%] Built target _rm_msgs_generate_messages_check_deps_SetLimitVel
+[  0%] Built target _rm_msgs_generate_messages_check_deps_LegCmd
+[  0%] Built target _rm_msgs_generate_messages_check_deps_TagMsgArray
+[  0%] Built target _rm_msgs_generate_messages_check_deps_EngineerActionGoal
+[  0%] Built target _rm_msgs_generate_messages_check_deps_GimbalCmd
+[  0%] Built target _rm_msgs_generate_messages_check_deps_KalmanData
+[  0%] Built target _rm_msgs_generate_messages_check_deps_MultiDofCmd
+[  0%] Built target _rm_msgs_generate_messages_check_deps_GimbalPosState
+make: *** [Makefile:141：all] 错误 2

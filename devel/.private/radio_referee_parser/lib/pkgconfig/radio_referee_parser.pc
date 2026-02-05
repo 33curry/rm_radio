@@ -5,4 +5,4 @@ Description: Description of radio_referee_parser
 Version: 0.1.0
 Cflags: -I/home/robot/radio_ws/src/radio_referee_parser/include
 Libs: -L${prefix}/lib 
-Requires: roscpp rm_msgs std_msgs geometry_msgs nodelet
+Requires: roscpp rm_msgs std_msgs geometry_msgs nodelet serial

@@ -11,8 +11,7 @@ class RadarDoubleKey(genpy.Message):
   _md5sum = "4e7c4656cadf17b1c0d247eed3cdf8e2"
   _type = "rm_msgs/RadarDoubleKey"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """uint8[6] key
-"""
+  _full_text = """uint8[6] key"""
   __slots__ = ['key']
   _slot_types = ['uint8[6]']
 

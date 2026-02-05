@@ -14,6 +14,7 @@
     <depend>geometry_msgs</depend>
     <depend>nodelet</depend>
     <depend>pluginlib</depend>
+    <depend>serial</depend>
 
     <export>
         <nodelet plugin="${prefix}/radio_referee_parser_plugins.xml" />
