@@ -86,7 +86,7 @@ void RadioRefereeParser::onInit()
   // 0x0A04
   enemy_status_pub_ = nh_.advertise<rm_msgs::RadarEnemyStatus>("/referee_parser/radar/enemy_status", 1);
   
-  // 0x0A05 (Assuming float array for simplicity of viewing all buffs)
+  // 0x0A05 
   enemy_buff_pub_ = nh_.advertise<rm_msgs::RadarEnemyBuff>("/referee_parser/radar/enemy_buff", 1);
   // 0x0A06
   double_key_pub_ = nh_.advertise<rm_msgs::RadarDoubleKey>("/referee_parser/radar/double_key", 1);
@@ -254,6 +254,7 @@ void RadioRefereeParser::serialThreadLoop()
   }
 }
 
+//使用话题进行解包测试
 void RadioRefereeParser::radioRefereeDataCallback(const rm_msgs::RadarRadioData::ConstPtr& msg)
 {
   // 协议化缓冲区拼包、校验、分发
@@ -315,6 +316,9 @@ void RadioRefereeParser::radioRefereeDataCallback(const rm_msgs::RadarRadioData:
         break;
       case MsgType::ENEMY_BUFF:
         parseEnemyBuff(payload, payload_len);
+        break;
+      case MsgType::DOUBLE_KEY:
+        parseDoubleKey(payload, payload_len);
         break;
       default:
         break;
